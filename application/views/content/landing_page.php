@@ -46,6 +46,50 @@
 </div>
 <!-- Carousel End -->
 
+<!-- Facts Start -->
+<div class="facts" data-parallax="scroll" data-image-src="img/facts.jpg') ?>">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="facts-item">
+                    <i class="fas fa-sort-amount-up"></i>
+                    <div class="facts-text">
+                        <h3 data-toggle="counter-up">5</h3>
+                        <p>Total Training</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="facts-item">
+                    <i class="fa fa-users"></i>
+                    <div class="facts-text">
+                        <h3 data-toggle="counter-up">250</h3>
+                        <p>Total Peserta</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="facts-item">
+                    <i class="fas fa-stamp"></i>
+                    <div class="facts-text">
+                        <h3 data-toggle="counter-up">450</h3>
+                        <p>Total Sertifikat</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="facts-item">
+                    <i class="fas fa-smile-beam"></i>
+                    <div class="facts-text">
+                        <h3 data-toggle="counter-up">4.85</h3>
+                        <p>Tingkat Kepuasan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Facts End -->
 
 <!-- About Start -->
 <div id="about" class="about">
@@ -68,10 +112,30 @@
                     <p>
                         Engineer Nusantara adalah pusat pelatihan, konsultasi dan pembelajaran mengenai software engineering seperti 3D Modeling, FEA validation, dan CFD Analysis.
                     </p>
-                    <h2>Membangun Bangsa dengan Ilmu Rekayasa</h2>
+                    <p>
+                        Kami berkomitmen untuk menjadi lembaga training dan penyedia layanan
+                        jasa desain - engineering yang berkualitas.
+                    </p>
+                    <h2>#MembangunBangsaDenganIlmuRekayasa</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br /><br />
+<!-- About End -->
+
+<!-- Visi-Misi Start -->
+<div id="visi-misi" class="visi-misi">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="service-item">
                     <h3>Visi</h3>
                     <p>Menjadi pusat pelatihan dan konsultan unggulan dalam bidang engineering di Indonesia, yang dapat memberikan manfaat bagi pembangunan negeri.</p>
-
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="service-item">
                     <h3>Misi</h3>
                     <ul>
                         <li><i class="far fa-check-circle"></i>Mengembangkan sumber daya manusia yang memiliki kejujuran dan etos kerja yang tinggi</li>
@@ -86,8 +150,7 @@
         </div>
     </div>
 </div>
-<!-- About End -->
-
+<!-- Visi-Misi End -->
 
 <!-- Service Start -->
 <div id="solution" class="service">
@@ -151,53 +214,6 @@
     </div>
 </div>
 <!-- Service End -->
-
-
-<!-- Facts Start -->
-<div class="facts" data-parallax="scroll" data-image-src="img/facts.jpg') ?>">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="facts-item">
-                    <i class="fas fa-sort-amount-up"></i>
-                    <div class="facts-text">
-                        <h3 data-toggle="counter-up">5</h3>
-                        <p>Total Training</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="facts-item">
-                    <i class="fa fa-users"></i>
-                    <div class="facts-text">
-                        <h3 data-toggle="counter-up">250</h3>
-                        <p>Total Peserta</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="facts-item">
-                    <i class="fas fa-stamp"></i>
-                    <div class="facts-text">
-                        <h3 data-toggle="counter-up">450</h3>
-                        <p>Total Sertifikat</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="facts-item">
-                    <i class="fas fa-smile-beam"></i>
-                    <div class="facts-text">
-                        <h3 data-toggle="counter-up">4.85</h3>
-                        <p>Tingkat Kepuasan</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Facts End -->
-
 
 <!-- Price Start -->
 <!-- <div class="price">
@@ -275,78 +291,78 @@
 
 <!-- Location Start -->
 <!-- <div class="location">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="section-header text-left">
-                        <p>Washing Points</p>
-                        <h2>Car Washing & Care Points</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="location-item">
-                                <i class="fa fa-map-marker-alt"></i>
-                                <div class="location-text">
-                                    <h3>Car Washing Point</h3>
-                                    <p>123 Street, New York, USA</p>
-                                    <p><strong>Call:</strong>+012 345 6789</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="location-item">
-                                <i class="fa fa-map-marker-alt"></i>
-                                <div class="location-text">
-                                    <h3>Car Washing Point</h3>
-                                    <p>123 Street, New York, USA</p>
-                                    <p><strong>Call:</strong>+012 345 6789</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="location-item">
-                                <i class="fa fa-map-marker-alt"></i>
-                                <div class="location-text">
-                                    <h3>Car Washing Point</h3>
-                                    <p>123 Street, New York, USA</p>
-                                    <p><strong>Call:</strong>+012 345 6789</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="location-item">
-                                <i class="fa fa-map-marker-alt"></i>
-                                <div class="location-text">
-                                    <h3>Car Washing Point</h3>
-                                    <p>123 Street, New York, USA</p>
-                                    <p><strong>Call:</strong>+012 345 6789</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="section-header text-left">
+                    <p>Washing Points</p>
+                    <h2>Car Washing & Care Points</h2>
                 </div>
-                <div class="col-lg-5">
-                    <div class="location-form">
-                        <h3>Request for a car wash</h3>
-                        <form>
-                            <div class="control-group">
-                                <input type="text" class="form-control" placeholder="Name" required="required" />
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="location-item">
+                            <i class="fa fa-map-marker-alt"></i>
+                            <div class="location-text">
+                                <h3>Car Washing Point</h3>
+                                <p>123 Street, New York, USA</p>
+                                <p><strong>Call:</strong>+012 345 6789</p>
                             </div>
-                            <div class="control-group">
-                                <input type="email" class="form-control" placeholder="Email" required="required" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="location-item">
+                            <i class="fa fa-map-marker-alt"></i>
+                            <div class="location-text">
+                                <h3>Car Washing Point</h3>
+                                <p>123 Street, New York, USA</p>
+                                <p><strong>Call:</strong>+012 345 6789</p>
                             </div>
-                            <div class="control-group">
-                                <textarea class="form-control" placeholder="Description" required="required"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="location-item">
+                            <i class="fa fa-map-marker-alt"></i>
+                            <div class="location-text">
+                                <h3>Car Washing Point</h3>
+                                <p>123 Street, New York, USA</p>
+                                <p><strong>Call:</strong>+012 345 6789</p>
                             </div>
-                            <div>
-                                <button class="btn btn-custom" type="submit">Send Request</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="location-item">
+                            <i class="fa fa-map-marker-alt"></i>
+                            <div class="location-text">
+                                <h3>Car Washing Point</h3>
+                                <p>123 Street, New York, USA</p>
+                                <p><strong>Call:</strong>+012 345 6789</p>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-5">
+                <div class="location-form">
+                    <h3>Request for a car wash</h3>
+                    <form>
+                        <div class="control-group">
+                            <input type="text" class="form-control" placeholder="Name" required="required" />
+                        </div>
+                        <div class="control-group">
+                            <input type="email" class="form-control" placeholder="Email" required="required" />
+                        </div>
+                        <div class="control-group">
+                            <textarea class="form-control" placeholder="Description" required="required"></textarea>
+                        </div>
+                        <div>
+                            <button class="btn btn-custom" type="submit">Send Request</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-    </div> -->
+    </div>
+</div> -->
 <!-- Location End -->
 
 
@@ -485,6 +501,31 @@
 </div>
 <!-- Testimonial End -->
 
+<!-- Contact Start -->
+<div class="testimonial" style="background-color: #FAC100;">
+    <div class="container">
+        <div class="section-header text-center">
+            <p style="color: #202C45;">Contact</p>
+            <h2>Contact Us</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 col-md-6" style="background-color: white; text-align: center; align-items: center;">
+                <i class="fas fa-envelope fa-3x" style="color: #FAC100;"></i>
+                <h3>Email</h3>
+                <p>info@engineernusantara.com</p>
+            </div>
+            <div class="col-lg-1 col-md-4">
+
+            </div>
+            <div class="col-lg-5 col-md-6" style="background-color: white; text-align: center; align-items: center;">
+                <i class="fab fa-whatsapp fa-3x" style="color: #FAC100;"></i>
+                <h3>Whatsapp</h3>
+                <p>087856207709</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
 
 <!-- Blog Start -->
 <!-- <div class="blog">
