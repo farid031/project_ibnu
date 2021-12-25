@@ -228,7 +228,7 @@ a:focus {
 /**********************************/
 .nav-bar {
     position: relative;
-    background: #202C45;
+    background: #FAC100;
 }
 
 .nav-bar.nav-sticky {
@@ -242,7 +242,7 @@ a:focus {
 
 .nav-bar .navbar {
     padding: 20px 0;
-    background: #202C45 !important;
+    background: #FAC100 !important;
     transition: .3s;
 }
 
@@ -254,7 +254,7 @@ a:focus {
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: #ffffff;
+    color: #000000;
     padding: 15px;
     font-weight: 500;
     letter-spacing: 1px;
@@ -262,7 +262,7 @@ a:focus {
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: #E81C2E;
+    color: #FFFFFF;
 }
 
 .nav-bar .dropdown-menu {
@@ -273,15 +273,15 @@ a:focus {
 }
 
 .nav-bar .btn.btn-custom {
-    color: #202C45;
-    background: #ffffff;
-    box-shadow: inset 0 0 0 0 #E81C2E;
+    color: #FFFFFF;
+    background: #000000;
+    box-shadow: inset 0 0 0 0 #FAC100;
 }
 
 .nav-bar .btn:hover {
-    color: #ffffff;
-    background: #E81C2E;
-    box-shadow: inset 200px 0 0 0 #E81C2E;
+    color: #000000;
+    background: #FFFFFF;
+    box-shadow: inset 200px 0 0 0 #FFFFFF;
 }
 
 @media (min-width: 992px) {
@@ -372,7 +372,7 @@ a:focus {
 }
 
 .carousel .carousel-text h3 {
-    color: #E81C2E;
+    color: #FAC100;
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 4px;
@@ -397,11 +397,12 @@ a:focus {
 
 .carousel .btn.btn-custom {
     padding: 20px 45px 22px 45px;
-    color: #ffffff;
+    color: #000000;
+    background-color: #FAC100;
 }
 
 .carousel .btn.btn-custom:hover {
-    color: #E81C2E;
+    color: #FFFFFF;
 }
 
 .carousel .owl-nav {
@@ -1928,7 +1929,7 @@ a:focus {
     position: relative;
     margin-top: 45px;
     padding-top: 90px;
-    background: #202C45;
+    background: #000000;
 }
 
 .footer .footer-contact,
@@ -1946,7 +1947,7 @@ a:focus {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 2px;
-    color: #E81C2E;
+    color: #FFFFFF;
 }
 
 .footer .footer-link a {
@@ -1965,7 +1966,7 @@ a:focus {
 }
 
 .footer .footer-link a:hover {
-    color: #E81C2E;
+    color: #FAC100;
     letter-spacing: 1px;
 }
 
@@ -1998,7 +1999,7 @@ a:focus {
 
 .footer .footer-social a:hover {
     color: #ffffff;
-    background: #E81C2E;
+    background: #FAC100;
 }
 
 .footer .footer-newsletter form {
@@ -2009,7 +2010,7 @@ a:focus {
 .footer .footer-newsletter input {
     margin-bottom: 15px;
     height: 45px;
-    background: transparent;
+    background: #ffffff;
     border: 1px solid #ffffff;
     border-radius: 5px;
 }
@@ -2025,13 +2026,13 @@ a:focus {
     width: 100%;
     color: #202C45;
     background: #ffffff;
-    box-shadow: inset 0 0 0 0 #E81C2E;
+    box-shadow: inset 0 0 0 0 #FAC100;
 }
 
 .footer .footer-newsletter .btn:hover {
     color: #ffffff;
-    background: #E81C2E;
-    box-shadow: inset 200px 0 0 0 #E81C2E;
+    background: #FAC100;
+    box-shadow: inset 200px 0 0 0 #FAC100;
 }
 
 .footer .copyright {
@@ -2046,7 +2047,7 @@ a:focus {
 }
 
 .footer .copyright p a {
-    color: #E81C2E;
+    color: #FFFFFF;
     font-weight: 700;
     letter-spacing: 1px;
 }

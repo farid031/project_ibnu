@@ -4,18 +4,18 @@
         <div class="owl-carousel">
             <div class="carousel-item">
                 <div class="carousel-img">
-                    <img src="<?php echo base_url('assets/img/carousel-1.jpg') ?>" alt="Image">
+                    <img src="<?php echo base_url('assets/img/bg-utama.jpg') ?>" alt="Image">
                 </div>
                 <div class="carousel-text">
-                    <h3>Washing & Detailing</h3>
-                    <h1>Keep your Car Newer</h1>
+                    <h3>Training & Development</h3>
+                    <h1 style="font-size: 70px;">Design & Engineering Skill</h1>
                     <p>
-                        Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac
+                        Training software terkait dengan proses desian-engineering:<br />Ansys, SketchUp, Inventor, Solidworks, Autocad, Mastercam, dsb.
                     </p>
-                    <a class="btn btn-custom" href="">Explore More</a>
+                    <a class="btn btn-custom" href="">Selengkapnya</a>
                 </div>
             </div>
-            <div class="carousel-item">
+            <!-- <div class="carousel-item">
                 <div class="carousel-img">
                     <img src="<?php echo base_url('assets/img/carousel-2.jpg') ?>" alt="Image">
                 </div>
@@ -40,7 +40,7 @@
                     </p>
                     <a class="btn btn-custom" href="">Explore More</a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
@@ -92,7 +92,7 @@
 <!-- Facts End -->
 
 <!-- About Start -->
-<div id="about" class="about">
+<div id="about" class="about" style="background-color: #FAC100;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
@@ -105,7 +105,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="section-header text-left">
-                    <p>About Us</p>
+                    <p style="color: black;">About Us</p>
                     <h2>Engineer Nusantara</h2>
                 </div>
                 <div class="about-content">
@@ -153,61 +153,25 @@
 <!-- Visi-Misi End -->
 
 <!-- Service Start -->
-<div id="solution" class="service">
+<div id="solution" class="service" style="background-color: #E5E8E8; padding: 20px;">
     <div class="container">
         <div class="section-header text-center">
-            <p>What We Do?</p>
+            <p style="color: black;">What We Do?</p>
             <h2>Solutions</h2>
         </div>
         <div class="row">
             <div class="col-lg-6 col-md-6">
-                <div class="service-item">
+                <div class="service-item" align="center">
                     <i class="fas fa-user-tie"></i>
                     <h3>Training</h3>
-                    <ol>
-                        <li>Ansys</li>
-                        <li>Sketchup</li>
-                        <li>Inventor</li>
-                        <li>Solidworks</li>
-                        <li>Autocad</li>
-                        <li>Mastercam</li>
-                    </ol>
+                    <p>Kami melayani training online maupun offline di bidang desain-engineering meliputi:<br />Ansys, Sketchup, Inventor, Solidworks, Autocad, Mastercam, dsb.</p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
-                <div class="service-item">
+                <div class="service-item" align="center">
                     <i class="far fa-calendar-check"></i>
                     <h3>Project</h3>
-                    <ol>
-                        <li>CAD Modeling</li>
-                        <ul style="list-style-type:disc;">
-                            <li>3D Modeling</li>
-                            <li>2D Detailing Drawing</li>
-                        </ul>
-                        <li>Analysis</li>
-                        <ul style="list-style-type:disc;">
-                            <li>Structural Analysis</li>
-                            <li>Flow Analysis</li>
-                            <li>Motion analysis</li>
-                        </ul>
-                        <li>Rendering</li>
-                        <ul style="list-style-type:disc;">
-                            <li>Foto Real View</li>
-                            <li>Animation</li>
-                        </ul>
-                        <li>Architecture</li>
-                        <ul style="list-style-type:disc;">
-                            <li>Interior Design</li>
-                            <li>Exterior Design</li>
-                            <li>Layouting</li>
-                        </ul>
-                        <li>Marketing Tools</li>
-                        <ul style="list-style-type:disc;">
-                            <li>Dokumen Company Profile</li>
-                            <li>Video Company Profile</li>
-                            <li>Website Company Profile</li>
-                        </ul>
-                    </ol>
+                    <p>Layanan jasa yang kami kerjakan meliputi bidang desain (CAD), Analysis Struktural (CAE), Analysis Aliran (CFD), Simulasi Macining (CAM), Rendering Design, Desain Interior & Exterior, serta desain Company Profile.</p>
                 </div>
             </div>
         </div>
@@ -452,7 +416,7 @@
 <div class="testimonial">
     <div class="container">
         <div class="section-header text-center">
-            <p>Testimonial</p>
+            <p style="color: black;">Testimonial</p>
             <h2>What our clients say</h2>
         </div>
         <div class="owl-carousel testimonials-carousel">
@@ -509,7 +473,7 @@
             <h2>Contact Us</h2>
         </div>
         <div class="row">
-            <div class="col-lg-5 col-md-6" style="background-color: white; text-align: center; align-items: center;">
+            <div class="col-lg-5 col-md-6" style="background-color: white; text-align: center; align-items: center; padding: 20px;">
                 <i class="fas fa-envelope fa-3x" style="color: #FAC100;"></i>
                 <h3>Email</h3>
                 <p>info@engineernusantara.com</p>
@@ -517,94 +481,12 @@
             <div class="col-lg-1 col-md-4">
 
             </div>
-            <div class="col-lg-5 col-md-6" style="background-color: white; text-align: center; align-items: center;">
+            <div class="col-lg-5 col-md-6" style="background-color: white; text-align: center; align-items: center; padding: 20px;">
                 <i class="fab fa-whatsapp fa-3x" style="color: #FAC100;"></i>
                 <h3>Whatsapp</h3>
-                <p>087856207709</p>
+                <p><a href="https://api.whatsapp.com/send?phone=6287856207709&text=Halo%2C+engineer+nusantara%2C+biasakah+Anda+membantu+permasalahan+saya%3F" target="_blank">087856207709</a></p>
             </div>
         </div>
     </div>
 </div>
 <!-- Contact End -->
-
-<!-- Blog Start -->
-<!-- <div class="blog">
-        <div class="container">
-            <div class="section-header text-center">
-                <p>Our Blog</p>
-                <h2>Latest news & articles</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="<?php echo base_url('assets/img/blog-1.jpg') ?>" alt="Image">
-                            <div class="meta-date">
-                                <span>01</span>
-                                <strong>Jan</strong>
-                                <span>2045</span>
-                            </div>
-                        </div>
-                        <div class="blog-text">
-                            <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Pellent iaculis blandit lorem, quis convall diam eleife. Nam in arcu sit amet massa ferment quis enim. Nunc augue velit metus congue eget semper
-                            </p>
-                        </div>
-                        <div class="blog-meta">
-                            <p><i class="fa fa-user"></i><a href="">Admin</a></p>
-                            <p><i class="fa fa-folder"></i><a href="">Web Design</a></p>
-                            <p><i class="fa fa-comments"></i><a href="">15 Comments</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="<?php echo base_url('assets/img/blog-2.jpg') ?>" alt="Image">
-                            <div class="meta-date">
-                                <span>01</span>
-                                <strong>Jan</strong>
-                                <span>2045</span>
-                            </div>
-                        </div>
-                        <div class="blog-text">
-                            <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Pellent iaculis blandit lorem, quis convall diam eleife. Nam in arcu sit amet massa ferment quis enim. Nunc augue velit metus congue eget semper
-                            </p>
-                        </div>
-                        <div class="blog-meta">
-                            <p><i class="fa fa-user"></i><a href="">Admin</a></p>
-                            <p><i class="fa fa-folder"></i><a href="">Web Design</a></p>
-                            <p><i class="fa fa-comments"></i><a href="">15 Comments</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="<?php echo base_url('assets/img/blog-3.jpg') ?>" alt="Image">
-                            <div class="meta-date">
-                                <span>01</span>
-                                <strong>Jan</strong>
-                                <span>2045</span>
-                            </div>
-                        </div>
-                        <div class="blog-text">
-                            <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Pellent iaculis blandit lorem, quis convall diam eleife. Nam in arcu sit amet massa ferment quis enim. Nunc augue velit metus congue eget semper
-                            </p>
-                        </div>
-                        <div class="blog-meta">
-                            <p><i class="fa fa-user"></i><a href="">Admin</a></p>
-                            <p><i class="fa fa-folder"></i><a href="">Web Design</a></p>
-                            <p><i class="fa fa-comments"></i><a href="">15 Comments</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-<!-- Blog End -->

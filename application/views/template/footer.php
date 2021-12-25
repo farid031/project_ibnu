@@ -4,53 +4,52 @@
         <div class="row">
             <div class="col-lg-3 col-md-6">
                 <div class="footer-contact">
-                    <h2>Get In Touch</h2>
-                    <p><i class="fa fa-map-marker-alt"></i>Sidoarjo</p>
+                    <h2><b>ENGINEER</b> NUSANTARA</h2>
+                    <p><i class="fa fa-map-marker-alt"></i>Surabaya, Indonesia</p>
                     <p><i class="fa fa-phone-alt"></i>087856207709</p>
                     <p><i class="fa fa-envelope"></i>info@engineernusantara.com</p>
                     <div class="footer-social">
-                        <!-- <a class="btn" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn" href=""><i class="fab fa-facebook-f"></i></a> -->
+                        <a class="btn" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn" href="https://www.youtube.com/channel/UCOyElSjNFiaCotYkbCSQARw" target="_blank"><i class="fab fa-youtube"></i></a>
                         <a class="btn" href="https://www.instagram.com/engineernusantara/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <!-- <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a> -->
+                        <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="footer-link">
-                    <h2>Popular Links</h2>
+                    <h2>Useful Links</h2>
+                    <a href="">Home</a>
                     <a href="#about">About Us</a>
-                    <!-- <a href="">Contact Us</a>
-                    <a href="">Our Service</a>
-                    <a href="">Service Points</a>
-                    <a href="">Pricing Plan</a> -->
+                    <a href="">Services</a>
+                    <a href="">Term of Service</a>
+                    <a href="">Proivacy Policy</a>
                 </div>
             </div>
-            <!-- <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6">
                 <div class="footer-link">
-                    <h2>Useful Links</h2>
-                    <a href="">Terms of use</a>
-                    <a href="">Privacy policy</a>
-                    <a href="">Cookies</a>
-                    <a href="">Help</a>
-                    <a href="">FQAs</a>
+                    <h2>Our Solution</h2>
+                    <a href="">Design Engineering</a>
+                    <a href="">Manufacturing</a>
+                    <a href="">Marketing & sales</a>
+                    <a href="">Services</a>
                 </div>
-            </div> -->
-            <!-- <div class="col-lg-3 col-md-6">
+            </div>
+            <div class="col-lg-3 col-md-6">
                 <div class="footer-newsletter">
-                    <h2>Newsletter</h2>
+                    <h2>Our Newsletter</h2>
+                    <p>Bergabung sekarang, untuk mendapatkan update terbaru dari kami seputar solusi design</p>
                     <form>
-                        <input class="form-control" placeholder="Full Name">
                         <input class="form-control" placeholder="Email">
                         <button class="btn btn-custom">Submit</button>
                     </form>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
     <div class="container copyright">
-        <p>&copy; <a href="#">Engineer Nusantara</a>, All Right Reserved. Support By <a href="#">Anak Bangsa Developer</a></p>
+        <p>&copy; <a href="#">Engineer Nusantara</a>, All Right Reserved.</p>
     </div>
 </div>
 <!-- Footer End -->
