@@ -75,34 +75,21 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto">
                         <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link">About</a>
-                        <a href="#solution" class="nav-item nav-link">Solution</a>
-                        <!-- <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Training</a>
-                            <div class="dropdown-menu">
-                                <a href="#" class="dropdown-item" data-toggle="dropdown">Ansys</a>
-                                <a href="#" class="dropdown-item" data-toggle="dropdown">Sketchup</a>
-                                <a href="#" class="dropdown-item" data-toggle="dropdown">Inventor</a>
-                                <a href="#" class="dropdown-item" data-toggle="dropdown">Solidworks</a>
-                                <a href="#" class="dropdown-item" data-toggle="dropdown">Autocad</a>
-                                <a href="#" class="dropdown-item" data-toggle="dropdown">Mastercam</a>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Project</a>
-                            <div class="dropdown-menu">
-                                <a href="#" class="dropdown-item" data-toggle="dropdown">CAD Modeling</a>
-                                <a href="#" class="dropdown-item" data-toggle="dropdown">Analysis</a>
-                                <a href="#" class="dropdown-item" data-toggle="dropdown">Rendering</a>
-                                <a href="#" class="dropdown-item" data-toggle="dropdown">Architecture</a>
-                                <a href="#" class="dropdown-item" data-toggle="dropdown">Marketing Tools</a>
-                            </div>
-                        </div> -->
-                        <a href="price.html" class="nav-item nav-link">Article</a>
-                        <a href="location.html" class="nav-item nav-link">EN Certification</a>
+                        <a href="#about" class="nav-item nav-link">My Learning</a>
+                        <a href="#solution" class="nav-item nav-link">My Achievements</a>
+                        <a href="price.html" class="nav-item nav-link">Catalog</a>
                     </div>
                     <div class="ml-auto">
-                        <a class="btn btn-custom" href="<?php echo base_url('C_login') ?>">Register/Login</a>
+                        <div class="dropdown">
+                            <button class="dropdown-toggle" id="dropdownMenuButton" style="background-color: #FAC100; border: none;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="<?php echo base_url('assets/img/user2-160x160.jpg') ?>" alt="User Image" height="40%" width="40%" style="border-radius: 50%;">
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <h4 class="dropdown-item"><?php echo $_SESSION['nama'] ?></h4>
+                                <a class="dropdown-item" href="#">User Setting</a>
+                                <a class="dropdown-item" href="<?php echo base_url('C_login/logout') ?>">Sign Out</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
