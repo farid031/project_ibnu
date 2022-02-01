@@ -74,7 +74,7 @@
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="<?php echo base_url('C_landing_page') ?>" class="nav-item nav-link active">Home</a>
                         <a href="#about" class="nav-item nav-link">About</a>
                         <a href="#solution" class="nav-item nav-link">Solution</a>
                         <!-- <div class="nav-item dropdown">
@@ -99,7 +99,7 @@
                             </div>
                         </div> -->
                         <a href="price.html" class="nav-item nav-link">Article</a>
-                        <a href="location.html" class="nav-item nav-link">EN Certification</a>
+                        <a href="<?php echo base_url('C_validation') ?>" class="nav-item nav-link">EN Certification</a>
                     </div>
                     <div class="ml-auto">
                         <a class="btn btn-custom" href="<?php echo base_url('C_login') ?>">Register/Login</a>

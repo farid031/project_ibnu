@@ -74,10 +74,10 @@
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link">My Learning</a>
-                        <a href="#solution" class="nav-item nav-link">My Achievements</a>
-                        <a href="price.html" class="nav-item nav-link">Catalog</a>
+                        <a href="<?php echo base_url('C_user_beranda') ?>" class="nav-item nav-link active">Home</a>
+                        <a href="#" class="nav-item nav-link">My Learning</a>
+                        <a href="#" class="nav-item nav-link">My Achievements</a>
+                        <a href="#" class="nav-item nav-link">Catalog</a>
                     </div>
                     <div class="ml-auto">
                         <div class="dropdown">
@@ -86,7 +86,7 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <h4 class="dropdown-item"><?php echo $_SESSION['nama'] ?></h4>
-                                <a class="dropdown-item" href="#">User Setting</a>
+                                <a class="dropdown-item" href="<?php echo base_url('C_user_setting') ?>">User Setting</a>
                                 <a class="dropdown-item" href="<?php echo base_url('C_login/logout') ?>">Sign Out</a>
                             </div>
                         </div>
