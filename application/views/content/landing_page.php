@@ -116,7 +116,7 @@
                         Kami berkomitmen untuk menjadi lembaga training dan penyedia layanan
                         jasa desain - engineering yang berkualitas.
                     </p>
-                    <h2>#MembangunBangsaDenganIlmuRekayasa</h2>
+                    <h6>#MembangunBangsaDenganIlmuRekayasa</h6>
                 </div>
             </div>
         </div>
