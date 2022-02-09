@@ -1,6 +1,6 @@
 <div id="about" class="about" style="background-color: #E3EBE8;">
     <div class="container" align="center" style="background-color: #E3EBE8;">
-        <div class=" col-lg-4" style="border: 3px solid #FAC100; padding: 20px; border-radius: 3%; background-color: white;">
+        <div class="col-lg-4" style="border: 3px solid #FAC100; padding: 20px; border-radius: 3%; background-color: white;">
             <h2>Register</h2><br />
             <h9>Get your free acces to be a professional engineer</h9>
             <div align="left">
