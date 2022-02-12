@@ -76,6 +76,55 @@
 
 <!-- Template Javascript -->
 <script src="<?php echo base_url('assets/js/main.js') ?>"></script>
+
+<!-- Sweet Alert 2 -->
+<script src="<?php echo base_url('assets/js/sweetalert2.min.js') ?>"></script>
+
+<!-- Javascript foor user page -->
+<script>
+    $(() => {
+        $("#btn_edit_avatar").click(() => {
+            Swal.fire({
+                title: 'Select image',
+                input: 'file',
+                inputAttributes: {
+                    'accept': 'image/*',
+                    'aria-label': 'Upload your profile picture'
+                }
+            }).then((file) => {
+                if (file) {
+                    var formData = new FormData();
+                    var file = $('.swal2-file')[0].files[0];
+                    formData.append("file_avatar", file);
+
+                    $.ajax({
+                        method: 'POST',
+                        url: "<?php echo base_url('C_user_setting/update_avatar') ?>",
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function(resp) {
+                            swal({
+                              title: 'Success',
+                              text:  'Avatar updated', 
+                              type: 'success'
+                            }).then(() => {
+                              window.location.reload();
+                            });
+                        },
+                        error: function() {
+                            swal({
+                                type: 'error',
+                                title: 'Error...',
+                                text: resp
+                            });
+                        }
+                    });
+                }
+            })
+        });
+    })
+</script>
 </body>
 
 </html>

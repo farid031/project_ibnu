@@ -55,4 +55,28 @@ class C_user_setting extends CI_Controller
         $this->M_data->update_data('user', $data, ['id_user' => $id]);
         redirect(base_url('C_user_setting'));
     }
+
+    public function update_avatar()
+    {
+        $config['upload_path']      = 'assets/img/avatar/';
+        $config['allowed_types']    = 'gif|jpg|png';
+        $config['file_name']        = 'avatar_'.$this->session->userdata('id');
+        $config['overwrite']        = true;
+
+        $this->load->library('upload');
+        $this->upload->initialize($config);
+
+        if (!$this->upload->do_upload('file_avatar')) {
+            $error = $this->upload->display_errors();
+
+            die($error);
+        } else {
+            $data = array(
+                'user_avatar' => $config['file_name'].$this->upload->data('file_ext')
+            );
+
+            $this->M_data->update_data('user', $data, ['id_user' => $this->session->userdata('id')]);
+        }
+
+    }
 }

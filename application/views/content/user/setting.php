@@ -1,8 +1,10 @@
 <div id="about" class="about" style="background-color: #E3EBE8;">
     <div class="container" align="center" style="background-color: #E3EBE8;">
         <div style="border: 4px solid #FAC100; padding: 20px; border-radius: 2%; background-color: white;">
-            <form enctype="multipart/form-data" method="POST" action="<?php echo base_url('C_user_setting/update_profile/'. $this->session->userdata('id')) ?>">
-                <img src="<?php echo base_url('assets/img/user2-160x160.jpg') ?>" alt="User Image" height="200px" width="200px" style="border-radius: 50%; border: 1px solid #000000;">
+            <form enctype="multipart/form-data" method="POST" action="<?php echo base_url('C_user_setting/update_profile/' . $this->session->userdata('id')) ?>">
+                <img src="<?php echo base_url('assets/img/avatar/'. $user[0]->user_avatar) ?>" alt="User Image" height="200px" width="200px" style="border-radius: 50%; border: 1px solid #000000;">
+                <br /><br/>
+                <button type="button" class="btn btn-outline-primary" id="btn_edit_avatar">Edit Avatar</button>
                 <br /><br />
                 <h1 style="font-size: 50px;"><b><?php echo $this->session->userdata('nama') ?></b></h1><br />
                 <h3 style="font-size: 30px;"><?php echo $this->session->userdata('email') ?></h3><br /><br />

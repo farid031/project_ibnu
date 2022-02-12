@@ -25,4 +25,7 @@
 
     <!-- Template Stylesheet -->
     <link href="<?php echo base_url('assets/css/style.css') ?>" rel="stylesheet">
+
+    <!-- Sweet Alert 2 -->
+    <link href="<?php echo base_url('assets/css/sweetalert2.scss') ?>" rel="stylesheet">
 </head>
