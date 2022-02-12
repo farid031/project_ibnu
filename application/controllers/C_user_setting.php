@@ -76,6 +76,8 @@ class C_user_setting extends CI_Controller
             );
 
             $this->M_data->update_data('user', $data, ['id_user' => $this->session->userdata('id')]);
+
+            die('success');
         }
 
     }

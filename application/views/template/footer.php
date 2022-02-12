@@ -91,8 +91,8 @@
                     'accept': 'image/*',
                     'aria-label': 'Upload your profile picture'
                 }
-            }).then((file) => {
-                if (file) {
+            }).then((file) => { 
+                if (file.isConfirmed) {
                     var formData = new FormData();
                     var file = $('.swal2-file')[0].files[0];
                     formData.append("file_avatar", file);
@@ -104,20 +104,21 @@
                         processData: false,
                         contentType: false,
                         success: function(resp) {
-                            swal({
-                              title: 'Success',
-                              text:  'Avatar updated', 
-                              type: 'success'
-                            }).then(() => {
-                              window.location.reload();
-                            });
-                        },
-                        error: function() {
-                            swal({
-                                type: 'error',
-                                title: 'Error...',
-                                text: resp
-                            });
+                            if (resp == 'success') {
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: 'Success',
+                                    text: 'Avatar updated'
+                                }).then(() => {
+                                    window.location.reload();
+                                });
+                            } else {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Error...',
+                                    html: resp
+                                });
+                            }
                         }
                     });
                 }
