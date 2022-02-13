@@ -75,14 +75,14 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto">
                         <a href="<?php echo base_url('C_user_beranda') ?>" class="nav-item nav-link active">Home</a>
-                        <a href="#" class="nav-item nav-link">My Learning</a>
+                        <a href="<?php echo base_url('C_my_learning') ?>" class="nav-item nav-link" class="nav-item nav-link">My Learning</a>
                         <a href="#" class="nav-item nav-link">My Achievements</a>
                         <a href="#" class="nav-item nav-link">Catalog</a>
                     </div>
                     <div class="ml-auto">
                         <div class="dropdown">
                             <button class="dropdown-toggle" id="dropdownMenuButton" style="background-color: #FAC100; border: none;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="<?php echo base_url('assets/img/user2-160x160.jpg') ?>" alt="User Image" height="40%" width="40%" style="border-radius: 50%;">
+                                <img src="<?php echo base_url('assets/img/avatar/' . $user[0]->user_avatar) ?>" alt="User Image" height="70px" width="70px" style="border-radius: 50%;">
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <h4 class="dropdown-item"><?php echo $_SESSION['nama'] ?></h4>
