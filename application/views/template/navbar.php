@@ -75,7 +75,7 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto">
                         <a href="<?php echo base_url('C_landing_page') ?>" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link">About</a>
+                        <a href="<?php echo base_url('C_landing_page/').'#about' ?>" class="nav-item nav-link">About</a>
                         <a href="#solution" class="nav-item nav-link">Solution</a>
                         <!-- <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Training</a>

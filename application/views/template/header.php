@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>Engineer Nusantara</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- <meta content="width=device-width, initial-scale=1.0" name="viewport"> -->
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta content="Free Website Template" name="keywords">
     <meta content="Free Website Template" name="description">
 
@@ -28,4 +30,7 @@
 
     <!-- Sweet Alert 2 -->
     <link href="<?php echo base_url('assets/css/sweetalert2.scss') ?>" rel="stylesheet">
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="<?php echo base_url('assets/lib/datatables.net-bs/css/dataTables.bootstrap.min.css') ?>">
 </head>

@@ -80,9 +80,22 @@
 <!-- Sweet Alert 2 -->
 <script src="<?php echo base_url('assets/js/sweetalert2.min.js') ?>"></script>
 
+<!-- DataTables -->
+<script src="<?php echo base_url('assets/lib/datatables.net/js/jquery.dataTables.min.js') ?>"></script>
+<script src="<?php echo base_url('assets/lib/datatables.net-bs/js/dataTables.bootstrap.min.js') ?>"></script>
+
 <!-- Javascript foor user page -->
 <script>
     $(() => {
+        $('#tbl_my_achievments').DataTable({
+            'paging': true,
+            'lengthChange': true,
+            'searching': true,
+            'ordering': true,
+            'info': true,
+            'autoWidth': false
+        })
+
         $("#btn_edit_avatar").click(() => {
             Swal.fire({
                 title: 'Select image',
@@ -91,7 +104,7 @@
                     'accept': 'image/*',
                     'aria-label': 'Upload your profile picture'
                 }
-            }).then((file) => { 
+            }).then((file) => {
                 if (file.isConfirmed) {
                     var formData = new FormData();
                     var file = $('.swal2-file')[0].files[0];

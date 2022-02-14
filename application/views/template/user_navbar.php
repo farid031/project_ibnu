@@ -75,8 +75,8 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto">
                         <a href="<?php echo base_url('C_user_beranda') ?>" class="nav-item nav-link active">Home</a>
-                        <a href="<?php echo base_url('C_my_learning') ?>" class="nav-item nav-link" class="nav-item nav-link">My Learning</a>
-                        <a href="#" class="nav-item nav-link">My Achievements</a>
+                        <a href="<?php echo base_url('C_user_my_learning') ?>" class="nav-item nav-link" class="nav-item nav-link">My Learning</a>
+                        <a href="<?php echo base_url('C_user_my_achievements') ?>" class="nav-item nav-link">My Achievements</a>
                         <a href="#" class="nav-item nav-link">Catalog</a>
                     </div>
                     <div class="ml-auto">
