@@ -22,7 +22,21 @@ class C_validation extends CI_Controller
         $cert_number_input = $this->input->post('cert_numb');
 
         $data['title']      = 'Certificate Validation';
-        $data['cert']       = $this->M_data->get_cert_by_numb((empty($cert_number_input) ? $this->uri->segment(3) . '/' . $this->uri->segment(4) . '/' . $this->uri->segment(5) . '/' . $this->uri->segment(6) . '/' . $this->uri->segment(7) : $cert_number_input));
+        $data['cert']       = $this->M_data->get_cert_by_numb($cert_number_input);
+
+        if (!empty($data['cert'])) {
+            $data['content']    = 'content/validate_cert';
+        } else {
+            $data['content']    = 'content/validate_cert_invalid';
+        }
+        $this->load->view('template/content', $data);
+    }
+
+    //validate certificate with barcode
+    public function val_qr($id_cert)
+    {
+        $data['title']      = 'Certificate Validation';
+        $data['cert']       = $this->M_data->get_cert_by_id($id_cert);
 
         if (!empty($data['cert'])) {
             $data['content']    = 'content/validate_cert';

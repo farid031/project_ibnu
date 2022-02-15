@@ -81,4 +81,20 @@ class M_data extends CI_Model
 
         return $query->result();
     }
+
+    function get_cert_by_id($id_cert)
+    {
+        $query = $this->db->query(
+            "SELECT 
+                * 
+            FROM 
+                certificate
+                LEFT JOIN ref_jns_certificate ON cert_id_jenis = id_jns_cert
+                LEFT JOIN user ON id_user = cert_id_user
+            WHERE 
+                id_cert = " . $id_cert
+        );
+
+        return $query->result();
+    }
 }
