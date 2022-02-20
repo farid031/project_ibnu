@@ -15,7 +15,7 @@
                                     <a href="<?php echo site_url('C_landing_page') ?>"><img src="<?php echo base_url('assets/img/logo_en.png') ?>" alt="Logo"></a>
                                 </td>
                                 <td>
-                                    <h2 style="font-weight: 800; color: #E81C2E; font-style: italic;">Engineer <span style="color: black;">Nusantara</span></h2>
+                                    <h2><b>Engineer</b> <span style="color: black;">Nusantara</span></h2>
                                 </td>
                             </tr>
                         </table>

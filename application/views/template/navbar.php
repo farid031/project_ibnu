@@ -15,7 +15,7 @@
                                     <a href="<?php echo site_url('C_landing_page') ?>"><img src="<?php echo base_url('assets/img/logo_en.png') ?>" alt="Logo"></a>
                                 </td>
                                 <td>
-                                    <h2 style="font-weight: 800; color: #E81C2E; font-style: italic;">Engineer <span style="color: black;">Nusantara</span></h2>
+                                    <h2><b>Engineer</b> <span style="color: black;">Nusantara</span></h2>
                                 </td>
                             </tr>
                         </table>
@@ -41,7 +41,7 @@
                                 </div>
                                 <div class="top-bar-text">
                                     <h3>Call Us</h3>
-                                    <p><a href="https://api.whatsapp.com/send?phone=6287856207709&text=Halo%2C+engineer+nusantara%2C+biasakah+Anda+membantu+permasalahan+saya%3F" target="_blank">087856207709</a></p>
+                                    <p><a href="https://api.whatsapp.com/send?phone=62817183124&text=Halo%2C+engineer+nusantara%2C+bisakah+Anda+membantu+permasalahan+saya%3F" target="_blank">0817183124</a></p>
                                 </div>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto">
                         <a href="<?php echo base_url('C_landing_page') ?>" class="nav-item nav-link active">Home</a>
-                        <a href="<?php echo base_url('C_landing_page/').'#about' ?>" class="nav-item nav-link">About</a>
+                        <a href="<?php echo base_url('C_landing_page/') . '#about' ?>" class="nav-item nav-link">About</a>
                         <a href="#solution" class="nav-item nav-link">Solution</a>
                         <!-- <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Training</a>

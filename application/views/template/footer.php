@@ -6,7 +6,7 @@
                 <div class="footer-contact">
                     <h2><b>ENGINEER</b> NUSANTARA</h2>
                     <p><i class="fa fa-map-marker-alt"></i>Surabaya, Indonesia</p>
-                    <p><i class="fa fa-phone-alt"></i>087856207709</p>
+                    <p><i class="fa fa-phone-alt"></i>0817183124</p>
                     <p><i class="fa fa-envelope"></i>info@engineernusantara.com</p>
                     <div class="footer-social">
                         <a class="btn" href=""><i class="fab fa-twitter"></i></a>
