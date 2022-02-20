@@ -4,14 +4,10 @@
             <div align="center" style="padding: 20px; background-color: #FAC100; width: 30%; border-radius: 5%;">
                 <img src="<?php echo base_url('assets/img/avatar/' . $user[0]->user_avatar) ?>" alt="User Image" height="200px" width="200px" style="border-radius: 50%;"><br />
                 <p style="font-weight: bold; font-size: 40px;"><?php echo $user[0]->user_name ?></p>
-                <div>
-                    <table cellpadding="5">
-                        <tr>
-                            <td style="font-size: 20px; font-weight: bold;">Pemula</td>
-                            <td style="font-size: 20px; font-weight: bold;">100</td>
-                            <td style="font-size: 20px; font-weight: bold;">100</td>
-                        </tr>
-                    </table>
+                <div class="row" align="center" style="padding-left: 20px;">
+                    <div align="center" class="level"><?php echo ($user[0]->user_is_registered == '0' ? 'Pemula' : 'Pemula') ?></div>
+                    <div align="center" class="badges"><?php echo ($user[0]->user_is_registered == '0' ? 0 : 100) ?></div>
+                    <div align="center" class="certificate"><?php echo ($user[0]->user_is_registered == '0' ? 0 : 100) ?></div>
                 </div>
             </div>
             <div class="box" style="padding: 20px; background-color: #E3EBE8; width: 70%;">
@@ -22,7 +18,7 @@
                             <th>Certificate Name</th>
                             <th>Certificate ID</th>
                             <th>Issued On</th>
-                            <th>Aksi</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -55,7 +51,7 @@
                             <th>Certificate Name</th>
                             <th>Certificate ID</th>
                             <th>Issued On</th>
-                            <th>Aksi</th>
+                            <th>Action</th>
                         </tr>
                     </tfoot>
                 </table>
@@ -75,7 +71,7 @@ foreach ($cert as $data) { ?>
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Edit Data Wisata</h4>
+                    <h4 class="modal-title">Sertificate Details</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

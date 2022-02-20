@@ -5,7 +5,7 @@ body {
     color: #444444;
     font-weight: 400;
     background: #ffffff;
-    font-family: 'Barlow';
+    font-family: 'Barlow', sans-serif;
 }
 
 h1,
@@ -2054,4 +2054,43 @@ a:focus {
 
 .footer .copyright p a:hover {
     color: #ffffff;
+}
+
+.level {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 10px;
+    font-weight: bold;
+    background-image: url('../img/emblem/level.png');
+    height: 100px;
+    width: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100px 90px;
+}
+
+.badges {
+	text-align: center;
+    padding-top: 30px;
+	font-size: 20px;
+	font-weight: bold;
+	background-image: url('../img/emblem/badges.png');
+	height: 100px;
+	width: 100px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 70px 90px;
+}
+
+.certificate {
+	text-align: center;
+    padding-top: 30px;
+	font-size: 20px;
+	font-weight: bold;
+	background-image: url('../img/emblem/certificate.png');
+	height: 100px;
+	width: 100px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 70px 90px;
 }

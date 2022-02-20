@@ -1,68 +1,4 @@
 <body>
-    <!-- Top Bar Start -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-4 col-md-12">
-                    <div class="logo">
-                        <!-- <a href="index.html">
-                                <h1>Auto<span>Wash</span></h1>
-                                <img src="<?php echo base_url('assets/img/logo_en.png') ?>" alt="Logo">
-                            </a> -->
-                        <table width="130%">
-                            <tr>
-                                <td width="14%">
-                                    <a href="<?php echo site_url('C_landing_page') ?>"><img src="<?php echo base_url('assets/img/logo_en.png') ?>" alt="Logo"></a>
-                                </td>
-                                <td>
-                                    <h2><b>Engineer</b> <span style="color: black;">Nusantara</span></h2>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-7 d-none d-lg-block">
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="top-bar-item">
-                                <div class="top-bar-icon">
-                                    <i class="far fa-clock"></i>
-                                </div>
-                                <div class="top-bar-text">
-                                    <h3>Opening Hour</h3>
-                                    <p>Mon - Fri, 8:00 - 9:00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="top-bar-item">
-                                <div class="top-bar-icon">
-                                    <i class="fa fa-phone-alt"></i>
-                                </div>
-                                <div class="top-bar-text">
-                                    <h3>Call Us</h3>
-                                    <p><a href="https://api.whatsapp.com/send?phone=62817183124&text=Halo%2C+engineer+nusantara%2C+bisakah+Anda+membantu+permasalahan+saya%3F" target="_blank">0817183124</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-5">
-                            <div class="top-bar-item">
-                                <div class="top-bar-icon">
-                                    <i class="far fa-envelope"></i>
-                                </div>
-                                <div class="top-bar-text">
-                                    <h3>Email Us</h3>
-                                    <p>info@engineernusantara.com</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Top Bar End -->
-
     <!-- Nav Bar Start -->
     <div class="nav-bar">
         <div class="container">
@@ -73,6 +9,10 @@
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+
+                    <a href="<?php echo site_url('C_landing_page') ?>"><img src="<?php echo base_url('assets/img/logo_en.png') ?>" alt="Logo" width="70px" height="70px" style="border: 1px solid black; border-radius: 50%;"></a>&nbsp;&nbsp;&nbsp;
+                    <h2><b>ENGINEER</b> <span style="color: black;">NUSANTARA</span></h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
                     <div class="navbar-nav mr-auto">
                         <a href="<?php echo base_url('C_landing_page') ?>" class="nav-item nav-link active">Home</a>
                         <a href="<?php echo base_url('C_landing_page/') . '#about' ?>" class="nav-item nav-link">About</a>

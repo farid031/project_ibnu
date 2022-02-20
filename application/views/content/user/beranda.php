@@ -9,14 +9,10 @@
             <div align="center" style="padding: 20px; background-color: #FAC100; width: 30%; border-radius: 5%;">
                 <img src="<?php echo base_url('assets/img/avatar/' . $user[0]->user_avatar) ?>" alt="User Image" height="200px" width="200px" style="border-radius: 50%;"><br />
                 <p style="font-weight: bold; font-size: 40px;"><?php echo $user[0]->user_name ?></p>
-                <div>
-                    <table cellpadding="5">
-                        <tr>
-                            <td style="font-size: 20px; font-weight: bold;">Pemula</td>
-                            <td style="font-size: 20px; font-weight: bold;">100</td>
-                            <td style="font-size: 20px; font-weight: bold;">100</td>
-                        </tr>
-                    </table>
+                <div class="row" align="center" style="padding-left: 20px;">
+                    <div align="center" class="level"><?php echo ($user[0]->user_is_registered == '0' ? 'Pemula' : 'Pemula') ?></div>
+                    <div align="center" class="badges"><?php echo ($user[0]->user_is_registered == '0' ? 0 : 100) ?></div>
+                    <div align="center" class="certificate"><?php echo ($user[0]->user_is_registered == '0' ? 0 : 100) ?></div>
                 </div>
             </div>
         </div>
