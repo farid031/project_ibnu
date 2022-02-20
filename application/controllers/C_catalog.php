@@ -18,8 +18,8 @@ class C_catalog extends CI_Controller
     public function index()
     {
         $data['content'] = 'content/user/catalog';
-        $data['title']     = 'Engineer Nusantara';
-        $data['user'] = $this->db->get_where('user', ['id_user' => $this->session->userdata('id')])->result();
+        $data['title']   = 'Engineer Nusantara';
+        $data['user']    = $this->db->get_where('user', ['id_user' => $this->session->userdata('id')])->result();
 
         $this->load->view('template/user_content', $data);
     }
