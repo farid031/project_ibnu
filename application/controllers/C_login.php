@@ -33,14 +33,19 @@ class C_login extends CI_Controller
                     'id' => $hasil->id_user,
                     'email' => $hasil->user_email,
                     'nama' => $hasil->user_name,
-                    'is_login' => TRUE
+                    'is_login' => TRUE,
+                    'is_admin' => ($hasil->user_is_admin == 1 ? TRUE : FALSE),
                 );
 
                 $this->session->set_userdata($userdata);
 
-                redirect(base_url('C_user_beranda'));
+                if ($hasil->user_is_admin == 1) {
+                    redirect(base_url('C_admin_beranda'));
+                } else{
+                    redirect(base_url('C_user_beranda'));
+                }
             } else {
-                $this->session->set_flashdata('failed', 'Password is invalid...!');
+                $this->session->set_flashdata('failed', 'Password is wrong...!');
                 redirect(base_url('C_login'));
             }
         } else {
