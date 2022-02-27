@@ -34,6 +34,10 @@
   <link rel="stylesheet" href="<?php echo base_url('assets/template_admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') ?>">
   <!-- DataTables -->
   <link rel="stylesheet" href="<?php echo base_url('assets/template_admin/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') ?>">
+  <!-- FontAwesome 5.15.4 -->
+  <link href="<?php echo base_url('assets/lib/fontawesome-5.15.4/css/all.min.css') ?>" rel="stylesheet">
+  <!-- Sweet Alert 2 -->
+  <link href="<?php echo base_url('assets/css/sweetalert2.scss') ?>" rel="stylesheet">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

@@ -13,7 +13,8 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Data Jenis Sertifikat</h3>
+                        <h3 class="box-title">Data Jenis Sertifikat</h3><br />
+                        <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal-input"><i class="fas fa-plus"></i> Jenis Sertifikat</button>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -28,7 +29,7 @@
                                 <?php
                                 $no = 1;
                                 foreach ($jns_sertifikat as $data_sert) {
-                                    ?>
+                                ?>
                                     <tr>
                                         <td><?php echo $no++; ?></td>
                                         <td><?php echo $data_sert->jns_cert_name; ?></td>
