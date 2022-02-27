@@ -304,7 +304,7 @@
                         </a>
                         <ul class="treeview-menu">
                             <li><a href="#"><i class="fa fa-circle-o"></i> Upload Sertifikat</a></li>
-                            <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Jenis Sertifikat</a></li>
+                            <li><a href="<?php echo base_url('C_admin_setting_jns_sertifikat') ?>"><i class="fa fa-circle-o"></i> Jenis Sertifikat</a></li>
                         </ul>
                     </li>
                 </ul>
