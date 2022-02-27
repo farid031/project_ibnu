@@ -20,6 +20,7 @@ class C_user_beranda extends CI_Controller
         $data['content'] = 'content/user/beranda';
         $data['title']     = 'Beranda';
         $data['user'] = $this->db->get_where('user', ['id_user' => $this->session->userdata('id')])->result();
+        $data['beranda']    = $this->M_data->get_data('setting_beranda_user')->result();
 
         $this->load->view('template/user_content', $data);
     }
