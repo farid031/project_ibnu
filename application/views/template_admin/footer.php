@@ -247,6 +247,32 @@
 <script src="<?php echo base_url('assets/js/sweetalert2.min.js') ?>"></script>
 
 <script>
+    function hapusJnsSertifikat(id_jns) {
+        Swal.fire({
+            title: 'Apakah Anda Yakin?',
+            text: "Data yang telah dihapus tidak dapat dikembalikan",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, hapus!',
+            cancelButtonText: 'Batal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: "POST",
+                    url: "<?php echo base_url('C_admin_setting_jns_sertifikat/delete_sertifikat'); ?>",
+                    data: {
+                        id_jns: id_jns
+                    },
+                    success: (data) => {
+                        window.location.reload();
+                    }
+                });
+            }
+        })
+    }
+
     $().ready(() => {
         $('#jns_sertifikat').DataTable()
     });
