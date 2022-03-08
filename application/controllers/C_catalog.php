@@ -20,6 +20,7 @@ class C_catalog extends CI_Controller
         $data['content'] = 'content/user/catalog';
         $data['title']   = 'Engineer Nusantara';
         $data['user']    = $this->db->get_where('user', ['id_user' => $this->session->userdata('id')])->result();
+        $data['catalog'] = $this->M_data->get_data_catalog();
 
         $this->load->view('template/user_content', $data);
     }

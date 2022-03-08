@@ -12,6 +12,10 @@ class C_admin_setting_jns_sertifikat extends CI_Controller
             // alert peringatan bahwa harus login
             $this->session->set_flashdata('failed', 'You are not login yet, please login first...');
             redirect(base_url('C_login'));
+        } elseif ($this->session->userdata('is_login') == TRUE && $this->session->userdata('is_admin') == FALSE) {
+            // alert peringatan bahwa yang login harus admin
+            $this->session->set_flashdata('failed', "You can't login as admin, cause you aren't admin...!");
+            redirect(base_url('C_login'));
         }
     }
 

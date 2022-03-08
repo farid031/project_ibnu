@@ -250,12 +250,12 @@
     function hapusJnsSertifikat(id_jns) {
         Swal.fire({
             title: 'Apakah Anda Yakin?',
-            text: "Data yang telah dihapus tidak dapat dikembalikan",
+            text: "Data jenis sertifikat yang telah dihapus tidak dapat dikembalikan",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, hapus!',
+            confirmButtonText: 'Ya, hapus!',
             cancelButtonText: 'Batal'
         }).then((result) => {
             if (result.isConfirmed) {
@@ -264,6 +264,32 @@
                     url: "<?php echo base_url('C_admin_setting_jns_sertifikat/delete_sertifikat'); ?>",
                     data: {
                         id_jns: id_jns
+                    },
+                    success: (data) => {
+                        window.location.reload();
+                    }
+                });
+            }
+        })
+    }
+
+    function hapusCatalog(id_catalog) {
+        Swal.fire({
+            title: 'Apakah Anda Yakin?',
+            text: "Data Catalog yang telah dihapus tidak dapat dikembalikan",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ya, hapus!',
+            cancelButtonText: 'Batal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: "POST",
+                    url: "<?php echo base_url('C_admin_catalog/delete_catalog'); ?>",
+                    data: {
+                        id_catalog: id_catalog
                     },
                     success: (data) => {
                         window.location.reload();

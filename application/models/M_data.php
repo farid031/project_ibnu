@@ -97,4 +97,27 @@ class M_data extends CI_Model
 
         return $query->result();
     }
+
+    function get_data_catalog()
+    {
+        $query = $this->db->query(
+            "SELECT 
+                *,
+                catalog_harga * (catalog_diskon/100) AS hrg_diskon
+            FROM 
+                catalog
+                LEFT JOIN user ON id_user = catalog_created_by
+            ORDER BY 
+                catalog_created_at DESC"
+        );
+
+        return $query->result();
+    }
+
+    function get_max_id($table, $field)
+    {
+        $query = $this->db->query("SELECT MAX(".$field.") AS id FROM ".$table);
+
+        return $query->result();
+    }
 }

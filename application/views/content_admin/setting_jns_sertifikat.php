@@ -45,7 +45,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Jenis Sertifikat</th>
-                                    <td>Aksi</td>
+                                    <th>Aksi</th>
                                 </tr>
                             </tfoot>
                         </table>

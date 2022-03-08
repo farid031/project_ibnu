@@ -284,12 +284,12 @@
                 <ul class="sidebar-menu" data-widget="tree">
                     <li class="header">MAIN NAVIGATION</li>
                     <li>
-                        <a href="#">
+                        <a href="<?php echo base_url('C_admin_beranda') ?>">
                             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                         </a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('C_admin_setting_beranda') ?>" target="_self">
+                        <a href="<?php echo base_url('C_admin_setting_beranda') ?>">
                             <i class="fa fa-pie-chart"></i>
                             <span>Beranda User</span>
                         </a>
@@ -306,6 +306,12 @@
                             <li><a href="#"><i class="fa fa-circle-o"></i> Upload Sertifikat</a></li>
                             <li><a href="<?php echo base_url('C_admin_setting_jns_sertifikat') ?>"><i class="fa fa-circle-o"></i> Jenis Sertifikat</a></li>
                         </ul>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('C_admin_catalog') ?>" target="_self">
+                            <i class="fa fa-pie-chart"></i>
+                            <span>Catalog</span>
+                        </a>
                     </li>
                 </ul>
             </section>
