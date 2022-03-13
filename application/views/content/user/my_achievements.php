@@ -28,7 +28,7 @@
                         foreach ($cert as $data) { ?>
                             <tr>
                                 <td><?php echo $no++; ?></td>
-                                <td><?php echo $data->cert_name; ?></td>
+                                <td><?php echo $data->jns_cert_name; ?></td>
                                 <td><?php echo $data->cert_no; ?></td>
                                 <td><?php echo $data->cert_created_at; ?></td>
                                 <td>
@@ -64,21 +64,26 @@
 <!-- Edit -->
 <?php
 $y = 1;
-foreach ($cert as $data) { ?>
+foreach ($cert as $data) {
+    $cert_name = str_replace('certificate', 'qrcode', $data->cert_file_url);
+    $cert_name_2 = str_replace('pdf', 'png', $cert_name);
+?>
 
 
     <div class="modal fade" id="modal-detail<?= $y++; ?>">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Sertificate Details</h4>
+                    <h4 class="modal-title">Sertificate QR Code</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
 
                 <div class="modal-body">
-                    <embed src="<?php echo base_url('/file_sertifikat') . '/' . $data->cert_file_url ?>" frameborder="0" width="100%" height="400px">
+                    <!-- <embed src="<?php echo base_url('/file_sertifikat') . '/' . $data->cert_file_url ?>" frameborder="0" width="100%" height="400px"> -->
+                    <img src="<?php echo base_url('assets/img/qrcode/' . $cert_name_2) ?>" alt="QR Code" width="150px" height="150px" align="center"/><br/>
+                    <small>You can use this QR Code to provide a quick reference to a web-page where information about the Certicate is displayed.<br/>For example, you could put this QR Code on your CV or business card.</small>
                 </div>
 
                 <div class="modal-footer">

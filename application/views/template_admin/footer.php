@@ -273,6 +273,32 @@
         })
     }
 
+    function hapusSertifikat(id_cert) {
+        Swal.fire({
+            title: 'Apakah Anda Yakin?',
+            text: "Data sertifikat yang telah dihapus tidak dapat dikembalikan",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ya, hapus!',
+            cancelButtonText: 'Batal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: "POST",
+                    url: "<?php echo base_url('C_admin_sertifikat/delete_sertifikat'); ?>",
+                    data: {
+                        id_cert: id_cert
+                    },
+                    success: (data) => {
+                        window.location.reload();
+                    }
+                });
+            }
+        })
+    }
+
     function hapusCatalog(id_catalog) {
         Swal.fire({
             title: 'Apakah Anda Yakin?',

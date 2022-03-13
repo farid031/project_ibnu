@@ -36,14 +36,19 @@ class M_data extends CI_Model
         $db->truncate($table);
     }
 
-    function get_data_wisata()
+    function get_all_certificate()
     {
-        $this->db->select('*');
-        $this->db->from('wisata');
-        $this->db->join('kategori_wisata', 'id_wisata = kateg_id_wisata');
-        $this->db->order_by('nama_wisata');
+        $query = $this->db->query(
+            "SELECT 
+                * 
+            FROM 
+                certificate
+                LEFT JOIN ref_jns_certificate ON cert_id_jenis = id_jns_cert
+                LEFT JOIN user ON id_user = cert_id_user
+            ORDER BY 
+                id_cert DESC"
+        );
 
-        $query = $this->db->get();
         return $query->result();
     }
 
