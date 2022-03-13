@@ -83,7 +83,7 @@ foreach ($cert as $data) {
                 <div class="modal-body">
                     <!-- <embed src="<?php echo base_url('/file_sertifikat') . '/' . $data->cert_file_url ?>" frameborder="0" width="100%" height="400px"> -->
                     <img src="<?php echo base_url('assets/img/qrcode/' . $cert_name_2) ?>" alt="QR Code" width="150px" height="150px" align="center"/><br/>
-                    <small>You can use this QR Code to provide a quick reference to a web-page where information about the Certicate is displayed.<br/>For example, you could put this QR Code on your CV or business card.</small>
+                    <small>You can use this QR Code to provide a quick reference to a web-page where information about the Certifcate is displayed.<br/>For example, you could put this QR Code on your CV or business card.</small>
                 </div>
 
                 <div class="modal-footer">

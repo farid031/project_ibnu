@@ -125,4 +125,11 @@ class M_data extends CI_Model
 
         return $query->result();
     }
+
+    function get_count_data($table, $field)
+    {
+        $query = $this->db->query("SELECT COUNT(" . $field . ") AS total FROM " . $table);
+
+        return $query->result();
+    }
 }
