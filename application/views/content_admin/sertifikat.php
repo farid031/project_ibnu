@@ -39,7 +39,7 @@
                                     <tr>
                                         <td><?php echo $no++; ?></td>
                                         <td><?php echo $data_sert->user_name; ?></td>
-                                        <td><?php echo $data_sert->jns_cert_name; ?></td>
+                                        <td><?php echo $data_sert->cert_name; ?></td>
                                         <td><?php echo $data_sert->cert_no; ?></td>
                                         <td><?php echo date('d M Y H:i:s', strtotime($data_sert->cert_created_at)); ?></td>
                                         <td>
@@ -142,7 +142,7 @@
         <div class="modal fade" id="modal-edit<?php echo $y++; ?>">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form role="form" method="post" action="<?php echo base_url('C_admin_setting_jns_sertifikat/update_sertifikat/' . $data->id_jns_cert); ?>" enctype="multipart/form-data" accept-charset="utf-8">
+                    <form role="form" method="post" action="<?php echo base_url('C_admin_sertifikat/update_sertifikat/' . $data->id_cert); ?>" enctype="multipart/form-data" accept-charset="utf-8">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span></button>

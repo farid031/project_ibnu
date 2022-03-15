@@ -132,4 +132,11 @@ class M_data extends CI_Model
 
         return $query->result();
     }
+
+    function get_count_member()
+    {
+        $query = $this->db->query("SELECT COUNT(id_user) AS total FROM user WHERE user_is_admin IS NOT TRUE");
+
+        return $query->result();
+    }
 }

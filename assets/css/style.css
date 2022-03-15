@@ -101,7 +101,7 @@ a:focus {
     width: 45px;
     height: 45px;
     border: 5px solid #dddddd;
-    border-top: 5px solid #E81C2E;
+    border-top: 5px solid #FAC100;
     border-radius: 50%;
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
@@ -128,7 +128,7 @@ a:focus {
     right: 15px;
     bottom: 15px;
     transition: .5s;
-    background: #E81C2E;
+    background: #FAC100;
     border-radius: 44px;
     z-index: 9;
 }
@@ -2094,3 +2094,18 @@ a:focus {
 	background-repeat: no-repeat;
 	background-size: 70px 90px;
 }
+
+div .dataTables_paginate {
+    width: 700px;
+    align-items: right;
+    padding-top: 5px;
+}
+
+/* div #tbl_my_achievments_wrapper div .row div .col-sm-7 {
+    text-align: right;
+    margin-left: 500%;
+} */
+
+li .paginate-button {
+	margin-left: 50px;
+} 

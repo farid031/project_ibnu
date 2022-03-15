@@ -326,7 +326,14 @@
     }
 
     $().ready(() => {
-        $('#jns_sertifikat').DataTable()
+        $('#jns_sertifikat').DataTable({
+            "paging": true,
+            "lengthChange": true,
+            "searching": true,
+            "ordering": true,
+            "info": true,
+            "autoWidth": true
+        });
     });
 </script>
 </body>

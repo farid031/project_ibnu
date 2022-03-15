@@ -26,6 +26,7 @@ class C_admin_beranda extends CI_Controller
         $data['count_sert']      = $this->M_data->get_count_data('certificate', 'id_cert');
         $data['count_cat']      = $this->M_data->get_count_data('catalog', 'id_catalog');
         $data['count_jns_sert']      = $this->M_data->get_count_data('ref_jns_certificate', 'id_jns_cert');
+        $data['count_user']      = $this->M_data->get_count_member();
 
         $this->load->view('template_admin/content', $data);
     }

@@ -1,4 +1,4 @@
-<div id="about" class="about" style="background-color: #E3EBE8;">
+<div class="about" style="background-color: #E3EBE8;">
     <div class="container" style="background-color: #E3EBE8;">
         <div class="row">
             <div align="center" style="padding: 20px; background-color: #FAC100; width: 30%; border-radius: 5%;">
@@ -10,7 +10,7 @@
                     <div align="center" class="certificate"><?php echo ($user[0]->user_is_registered == '0' ? 0 : 100) ?></div>
                 </div>
             </div>
-            <div class="box" style="padding: 20px; background-color: #E3EBE8; width: 70%;">
+            <div style="padding: 20px; background-color: #E3EBE8; width: 70%; align-content: justify;">
                 <table id="tbl_my_achievments" class="table table-bordered table-striped table-responsive">
                     <thead>
                         <tr>
@@ -30,7 +30,7 @@
                                 <td><?php echo $no++; ?></td>
                                 <td><?php echo $data->jns_cert_name; ?></td>
                                 <td><?php echo $data->cert_no; ?></td>
-                                <td><?php echo $data->cert_created_at; ?></td>
+                                <td><?php echo date('d M Y H:i:s', strtotime($data->cert_created_at)) ?></td>
                                 <td>
                                     <button style="width: 40px;" type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-detail<?= $a++; ?>" title="Detail Certificate">
                                         <i class="fas fa-info-circle"></i>

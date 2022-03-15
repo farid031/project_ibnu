@@ -102,16 +102,19 @@ class C_admin_sertifikat extends CI_Controller
     }
 
     //update sertifikat
-    public function update_sertifikat($id_jns)
+    public function update_sertifikat($id_cert)
     {
+        $input = $this->input->post();
+        
         $data = array(
-            'jns_cert_name'       => $this->input->post('nama_sertifikat'),
-            'jns_cert_updated_by' => $this->session->userdata('id'),
-            'jns_cert_updated_at' => date('Y-m-d H:i:s')
+            'cert_id_user'      => $input['pemilik'],
+            'cert_id_jenis'     => $input['nama_sert'],
+            'cert_no'           => $input['id_sert'],
+            'cert_name'         => $input['ket_sert']
         );
 
-        $this->M_data->update_data('ref_jns_certificate', $data, 'id_jns_cert = '.$id_jns);
-        redirect('C_admin_setting_jns_sertifikat');
+        $this->M_data->update_data('certificate', $data, 'id_cert = '.$id_cert);
+        redirect('C_admin_sertifikat');
     }
 
     public function delete_sertifikat()
