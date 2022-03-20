@@ -36,7 +36,7 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        
+
                                     </div>
                                     <div class="pull-right">
                                         <a href="<?php echo base_url('C_login/logout') ?>" class="btn btn-default btn-flat">Sign out</a>
@@ -71,6 +71,11 @@
                     <li>
                         <a href="<?php echo base_url('C_admin_beranda') ?>">
                             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('C_admin_statistik') ?>">
+                            <i class="fa fa-pie-chart"></i> <span>Setting Statistik</span>
                         </a>
                     </li>
                     <li>

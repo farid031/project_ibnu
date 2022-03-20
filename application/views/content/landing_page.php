@@ -15,32 +15,6 @@
                     <a class="btn btn-custom" href="">Selengkapnya</a>
                 </div>
             </div>
-            <!-- <div class="carousel-item">
-                <div class="carousel-img">
-                    <img src="<?php echo base_url('assets/img/carousel-2.jpg') ?>" alt="Image">
-                </div>
-                <div class="carousel-text">
-                    <h3>Washing & Detailing</h3>
-                    <h1>Quality service for you</h1>
-                    <p>
-                        Morbi sagittis turpis id suscipit feugiat. Suspendisse eu augue urna. Morbi sagittis orci sodales
-                    </p>
-                    <a class="btn btn-custom" href="">Explore More</a>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="carousel-img">
-                    <img src="<?php echo base_url('assets/img/carousel-3.jpg') ?>" alt="Image">
-                </div>
-                <div class="carousel-text">
-                    <h3>Washing & Detailing</h3>
-                    <h1>Exterior & Interior Washing</h1>
-                    <p>
-                        Sed ultrices, est eget feugiat accumsan, dui nibh egestas tortor, ut rhoncus nibh ligula euismod quam
-                    </p>
-                    <a class="btn btn-custom" href="">Explore More</a>
-                </div>
-            </div> -->
         </div>
     </div>
 </div>
@@ -54,7 +28,7 @@
                 <div class="facts-item">
                     <i class="fas fa-sort-amount-up"></i>
                     <div class="facts-text">
-                        <h3 data-toggle="counter-up">5</h3>
+                        <h3 data-toggle="counter-up"><?php echo $statistik[0]->landing_training ?></h3>
                         <p>Total Training</p>
                     </div>
                 </div>
@@ -63,7 +37,7 @@
                 <div class="facts-item">
                     <i class="fa fa-users"></i>
                     <div class="facts-text">
-                        <h3 data-toggle="counter-up">250</h3>
+                        <h3 data-toggle="counter-up"><?php echo $statistik[0]->landing_peserta ?></h3>
                         <p>Total Peserta</p>
                     </div>
                 </div>
@@ -72,7 +46,7 @@
                 <div class="facts-item">
                     <i class="fas fa-stamp"></i>
                     <div class="facts-text">
-                        <h3 data-toggle="counter-up">450</h3>
+                        <h3 data-toggle="counter-up"><?php echo $statistik[0]->landing_sertifikat ?></h3>
                         <p>Total Sertifikat</p>
                     </div>
                 </div>
@@ -81,7 +55,7 @@
                 <div class="facts-item">
                     <i class="fas fa-smile-beam"></i>
                     <div class="facts-text">
-                        <h3 data-toggle="counter-up">4.85</h3>
+                        <h3 data-toggle="counter-up"><?php echo $statistik[0]->landing_kepuasan ?></h3>
                         <p>Tingkat Kepuasan</p>
                     </div>
                 </div>
@@ -138,11 +112,11 @@
                 <div class="service-item">
                     <h3>Misi</h3>
                     <ul>
-                        <li><i class="far fa-check-circle"></i>Mengembangkan sumber daya manusia yang memiliki kejujuran dan etos kerja yang tinggi</li>
-                        <li><i class="far fa-check-circle"></i>Memberikan pelatihan mengenai software engineering dengan trainer yang ahli dan tersertifikasi</li>
-                        <li><i class="far fa-check-circle"></i>Berperan aktif dalam berbagi pengetahuan tentang dunia teknik</li>
-                        <li><i class="far fa-check-circle"></i>Membantu meningkatkan kualitas dari lulusan mahasiswa teknik indonesia agar dapat bersaing dengan tenaga asing</li>
-                        <li><i class="far fa-check-circle"></i>Menyediakan peralatan yang berkualitas untuk mendapatkan hasil yang optimal.
+                        <li>Mengembangkan sumber daya manusia yang memiliki kejujuran dan etos kerja yang tinggi</li>
+                        <li>Memberikan pelatihan mengenai software engineering dengan trainer yang ahli dan tersertifikasi</li>
+                        <li>Berperan aktif dalam berbagi pengetahuan tentang dunia teknik</li>
+                        <li>Membantu meningkatkan kualitas dari lulusan mahasiswa teknik indonesia agar dapat bersaing dengan tenaga asing</li>
+                        <li>Menyediakan peralatan yang berkualitas untuk mendapatkan hasil yang optimal.
                         </li>
                     </ul>
                 </div>

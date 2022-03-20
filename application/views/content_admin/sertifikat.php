@@ -3,7 +3,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Jenis Sertifikat
+            Data Sertifikat
         </h1>
     </section>
 

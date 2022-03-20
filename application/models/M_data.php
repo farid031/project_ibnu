@@ -126,16 +126,21 @@ class M_data extends CI_Model
         return $query->result();
     }
 
-    function get_count_data($table, $field)
+    function get_count_data($table, $field, $where = '')
     {
-        $query = $this->db->query("SELECT COUNT(" . $field . ") AS total FROM " . $table);
+        $whr = '';
+        if (!empty($where)) {
+            $whr = 'WHERE '.$where;
+        }
+        
+        $query = $this->db->query("SELECT COUNT(" . $field . ") AS total FROM " . $table.$whr);
 
         return $query->result();
     }
 
     function get_count_member()
     {
-        $query = $this->db->query("SELECT COUNT(id_user) AS total FROM user WHERE user_is_admin IS NOT TRUE");
+        $query = $this->db->query("SELECT COUNT(id_user) AS total FROM user WHERE user_is_admin IS NOT TRUE AND user_is_registered IS TRUE");
 
         return $query->result();
     }

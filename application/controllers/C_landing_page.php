@@ -14,6 +14,7 @@ class C_landing_page extends CI_Controller
     {
         $data['content'] = 'content/landing_page';
         $data['title']     = 'Engineer Nusantara';
+        $data['statistik']      = $this->M_data->get_data_where('setting_landing_page', array('id_landing' => 1))->result();
 
         $this->load->view('template/content', $data);
     }

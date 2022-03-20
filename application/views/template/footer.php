@@ -88,7 +88,7 @@
 <script>
     $(() => {
         $('#tbl_my_achievments').DataTable({
-            'paging': true,
+            'paging': false,
             'lengthChange': true,
             'searching': true,
             'ordering': true,
