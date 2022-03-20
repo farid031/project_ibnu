@@ -23,22 +23,22 @@ class C_admin_banner extends CI_Controller
     {
         $data['content'] = 'content_admin/banner';
         $data['title']     = 'Admin Engineer Nusantara';
-        $data['catalog']    = $this->M_data->get_data_catalog();
+        $data['banner']    = $this->M_data->get_data_banner();
 
         $this->load->view('template_admin/content', $data);
     }
 
-    public function input_catalog()
+    public function input_banner()
     {
         $input = $this->input->post();
-        $id = $this->M_data->get_max_id('catalog', 'id_catalog');
+        $id = $this->M_data->get_max_id('landing_page_banner', 'id_banner');
         $next_id = $id[0]->id + 1;
 
         $config = array(
-            'upload_path'   => 'assets/img/flyer-catalog/',
+            'upload_path'   => 'assets/img/flyer-banner/',
             'allowed_types' => 'gif|jpg|png',
             'max_size'      => '1024', // in KB
-            'file_name'     => 'flyer_'.$next_id,
+            'file_name'     => 'banner_'.$next_id,
             'overwrite'     => TRUE
         );
 
@@ -63,19 +63,14 @@ class C_admin_banner extends CI_Controller
         } else {
             $data_gambar = $this->upload->data();
             $data = array(
-                'catalog_title'         => $input['nama_katalog'],
-                'catalog_penghargaan'   => $input['penghargaan'], 
-                'catalog_pelajaran'     => $input['materi'],
-                'catalog_harga'         => $input['harga'],
-                'catalog_diskon'        => $input['diskon'],
-                'catalog_link'          => $input['link'],
-                'catalog_flyer_url'     => $config['upload_path'] . $config['file_name'] . $data_gambar['file_ext'],
-                'catalog_created_by'    => $this->session->userdata('id'),
-                'catalog_created_at'    => date('Y-m-d H:i:s')
+                'judul_banner'      => $input['judul_banner'],
+                'subjudul_banner'   => $input['subjudul_banner'],
+                'desc_banner'       => $input['deskripsi'],
+                'img_banner_url'    => $config['upload_path'] . $config['file_name'] . $data_gambar['file_ext']
             );
 
-            $this->M_data->simpan_data('catalog', $data);
-            redirect('C_admin_catalog');
+            $this->M_data->simpan_data('landing_page_banner', $data);
+            redirect('C_admin_banner');
         }
     }
 

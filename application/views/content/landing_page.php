@@ -2,19 +2,19 @@
 <div class="carousel">
     <div class="container-fluid">
         <div class="owl-carousel">
-            <div class="carousel-item">
-                <div class="carousel-img">
-                    <img src="<?php echo base_url('assets/img/bg-utama.jpg') ?>" alt="Image">
+            <?php foreach ($banner as $data) { ?>
+                <div class="carousel-item">
+                    <div class="carousel-img">
+                        <img src="<?php echo base_url($data->img_banner_url) ?>" alt="Image">
+                    </div>
+                    <div class="carousel-text">
+                        <h3><?php echo $data->judul_banner ?></h3>
+                        <h1 style="font-size: 70px;"><?php echo $data->subjudul_banner ?></h1>
+                        <p><?php echo $data->desc_banner ?></p>
+                        <a class="btn btn-custom" href="">Selengkapnya</a>
+                    </div>
                 </div>
-                <div class="carousel-text">
-                    <h3>Training & Development</h3>
-                    <h1 style="font-size: 70px;">Design & Engineering Skill</h1>
-                    <p>
-                        Training software terkait dengan proses desian-engineering:<br />Ansys, SketchUp, Inventor, Solidworks, Autocad, Mastercam, dsb.
-                    </p>
-                    <a class="btn btn-custom" href="">Selengkapnya</a>
-                </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
 </div>

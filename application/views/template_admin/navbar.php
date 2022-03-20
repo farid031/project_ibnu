@@ -73,10 +73,18 @@
                             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="<?php echo base_url('C_admin_statistik') ?>">
-                            <i class="fa fa-pie-chart"></i> <span>Setting Statistik</span>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-pie-chart"></i>
+                            <span>Setting Landing Page</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
                         </a>
+                        <ul class="treeview-menu">
+                            <li><a href="<?php echo base_url('C_admin_statistik') ?>"><i class="fa fa-circle-o"></i> Setting Statistik</a></li>
+                            <li><a href="<?php echo base_url('C_admin_banner') ?>"><i class="fa fa-circle-o"></i> Setting Banner</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="<?php echo base_url('C_admin_setting_beranda') ?>">

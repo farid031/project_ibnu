@@ -12,9 +12,10 @@ class C_landing_page extends CI_Controller
 
     public function index()
     {
-        $data['content'] = 'content/landing_page';
-        $data['title']     = 'Engineer Nusantara';
-        $data['statistik']      = $this->M_data->get_data_where('setting_landing_page', array('id_landing' => 1))->result();
+        $data['content']    = 'content/landing_page';
+        $data['title']      = 'Engineer Nusantara';
+        $data['statistik']  = $this->M_data->get_data_where('setting_landing_page', array('id_landing' => 1))->result();
+        $data['banner']     = $this->M_data->get_data_banner();
 
         $this->load->view('template/content', $data);
     }
