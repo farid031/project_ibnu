@@ -75,26 +75,26 @@ class C_admin_banner extends CI_Controller
     }
 
     //update sertifikat
-    public function update_catalog($id_catalog)
+    public function update_banner($id_banner)
     {
         $input = $this->input->post();
         $data = array(
-                'catalog_title'         => $input['nama_katalog'],
-                'catalog_penghargaan'   => $input['penghargaan'], 
-                'catalog_pelajaran'     => $input['materi'],
-                'catalog_harga'         => $input['harga'],
-                'catalog_diskon'        => $input['diskon'],
-                'catalog_link'          => $input['link'],
-                'catalog_updated_by'    => $this->session->userdata('id'),
-                'catalog_updated_at'    => date('Y-m-d H:i:s')
-            );
+            'judul_banner'      => $input['judul_banner'],
+            'subjudul_banner'   => $input['subjudul_banner'],
+            'desc_banner'       => $input['deskripsi'],
+        );
 
-        $this->M_data->update_data('catalog', $data, 'id_catalog = ' . $id_catalog);
-        redirect('C_admin_catalog');
+        $this->M_data->update_data('landing_page_banner', $data, 'id_banner = ' . $id_banner);
+        redirect('C_admin_banner');
     }
 
-    public function delete_catalog()
+    public function delete_banner()
     {
-        $this->M_data->hapus_data('catalog', 'id_catalog = ' . $_POST['id_catalog']);
+        $banner = $this->M_data->get_banner_by_id($_POST['id_banner']);
+        if (!empty($banner[0]->img_banner_url)) {
+            unlink($banner[0]->img_banner_url);
+        }
+
+        $this->M_data->hapus_data('landing_page_banner', 'id_banner = ' . $_POST['id_banner']);
     }
 }

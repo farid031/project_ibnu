@@ -40,7 +40,7 @@
                                         <td><?php echo $data_banner->subjudul_banner; ?></td>
                                         <td><?php echo $data_banner->desc_banner; ?></td>
                                         <td>
-                                            <button style="width: 60px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-image<?= $a; ?>" title="Lihat Flyer">Flyer</button> <button style="width: 60px;" type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit<?= $a; ?>" title="Edit Katalog">Edit</button> <button style="width: 60px;" class="btn btn-danger btn-md" onclick="hapusCatalog(<?php echo $data_banner->id_banner ?>)" title="Hapus Katalog">Hapus</button>
+                                            <button style="width: 60px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-image<?= $a; ?>" title="Lihat Flyer">Flyer</button> <button style="width: 60px;" type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit<?= $a; ?>" title="Edit Banner">Edit</button> <button style="width: 60px;" class="btn btn-danger btn-md" onclick="hapusBanner(<?php echo $data_banner->id_banner ?>)" title="Hapus Banner">Hapus</button>
                                         </td>
                                     </tr>
                                 <?php $a++;
@@ -117,7 +117,7 @@
         <div class="modal fade" id="modal-edit<?= $y++; ?>">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form role="form" method="post" action="<?php echo base_url('C_admin_catalog/update_catalog/' . $data->id_banner); ?>" enctype="multipart/form-data" accept-charset="utf-8">
+                    <form role="form" method="post" action="<?php echo base_url('C_admin_banner/update_banner/' . $data->id_banner); ?>" enctype="multipart/form-data" accept-charset="utf-8">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span></button>

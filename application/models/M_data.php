@@ -158,4 +158,18 @@ class M_data extends CI_Model
 
         return $query->result();
     }
+
+    function get_banner_by_id($id_banner)
+    {
+        $query = $this->db->query(
+            "SELECT 
+                * 
+            FROM 
+                landing_page_banner
+            WHERE 
+                id_banner = " . $id_banner
+        );
+
+        return $query->result();
+    }
 }
