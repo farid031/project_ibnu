@@ -172,4 +172,36 @@ class M_data extends CI_Model
 
         return $query->result();
     }
+
+    function get_learning_title()
+    {
+        $query = $this->db->query(
+            "SELECT
+                *,
+                (SELECT COUNT(id_learn_head) FROM learning_header WHERE learn_head_id_title = id_learn_title) AS jml_header
+            FROM
+                learning_title 
+            ORDER BY
+                learn_title_desc ASC"
+        );
+
+        return $query->result();
+    }
+
+    function get_learning_header($id_title)
+    {
+        $query = $this->db->query(
+            "SELECT
+                *,
+                (SELECT COUNT(id_learn_det) FROM learning_detail WHERE learn_det_id_header = id_learn_head) AS jml_header
+            FROM
+                learning_header
+            WHERE
+                learn_head_id_title = " . $id_title . "
+            ORDER BY
+                learn_head_desc ASC"
+        );
+
+        return $query->result();
+    }
 }

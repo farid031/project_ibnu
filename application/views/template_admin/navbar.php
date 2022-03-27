@@ -92,6 +92,12 @@
                             <span>Beranda User</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="<?php echo base_url('C_admin_learning') ?>">
+                            <i class="fa fa-pie-chart"></i>
+                            <span>Learning</span>
+                        </a>
+                    </li>
                     <li class="treeview">
                         <a href="#">
                             <i class="fa fa-laptop"></i>

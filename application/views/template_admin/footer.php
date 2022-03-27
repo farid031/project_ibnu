@@ -351,6 +351,58 @@
         })
     }
 
+    function hapusLearningTitle(id_title) {
+        Swal.fire({
+            title: 'Apakah Anda Yakin?',
+            text: "Data Judul Learning yang telah dihapus tidak dapat dikembalikan",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ya, hapus!',
+            cancelButtonText: 'Batal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: "POST",
+                    url: "<?php echo base_url('C_admin_learning/delete_learn_title'); ?>",
+                    data: {
+                        id_learn_title: id_title
+                    },
+                    success: (data) => {
+                        window.location.reload();
+                    }
+                });
+            }
+        })
+    }
+
+    function hapusLearningHeader(id_header) {
+        Swal.fire({
+            title: 'Apakah Anda Yakin?',
+            text: "Data Learning yang telah dihapus tidak dapat dikembalikan",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ya, hapus!',
+            cancelButtonText: 'Batal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: "POST",
+                    url: "<?php echo base_url('C_admin_learning_header/delete_learn_header'); ?>",
+                    data: {
+                        id_learn_head: id_header
+                    },
+                    success: (data) => {
+                        window.location.reload();
+                    }
+                });
+            }
+        })
+    }
+
     $().ready(() => {
         $('#jns_sertifikat').DataTable({
             "paging": true,
