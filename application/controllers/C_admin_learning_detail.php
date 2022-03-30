@@ -128,7 +128,7 @@ class C_admin_learning_detail extends CI_Controller
             'learn_det_updated_at'    => date('Y-m-d H:i:s')
         );
 
-        if (isset($_FILES['banner']['name'])) {
+        if (!empty($_FILES['banner']['name']) || $_FILES['banner']['name'] !== '') {
             $config_banner = array(
                 'upload_path'   => 'assets/img/banner-learning/',
                 'allowed_types' => 'gif|jpg|png',
@@ -162,7 +162,7 @@ class C_admin_learning_detail extends CI_Controller
             }
         }
 
-        if (isset($_FILES['video']['name'])) {
+        if (!empty($_FILES['video']['name']) || $_FILES['video']['name'] !== '') {
             $config_video = array(
                 'upload_path'   => 'assets/video/video-learning/',
                 'allowed_types' => 'mp4|3gp|avi',
@@ -204,11 +204,11 @@ class C_admin_learning_detail extends CI_Controller
     {
         $learning = $this->M_data->get_learning_detail_by_id($_POST['id_detail']);
         if (!empty($learning[0]->learn_det_banner_file)) {
-            unlink($learning[0]->learn_det_banner_file);
+            unlink('assets/img/banner-learning/'.$learning[0]->learn_det_banner_file);
         }
 
         if (!empty($learning[0]->learn_det_video_file)) {
-            unlink($learning[0]->learn_det_video_file);
+            unlink('assets/video/video-learning/'.$learning[0]->learn_det_video_file);
         }
 
         $this->M_data->hapus_data('learning_detail', 'id_learn_det = ' . $_POST['id_detail']);
