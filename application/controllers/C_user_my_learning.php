@@ -19,8 +19,8 @@ class C_user_my_learning extends CI_Controller
         $data['content'] = 'content/user/my_learning';
         $data['title']     = 'Engineer Nusantara';
         $data['user'] = $this->db->get_where('user', ['id_user' => $this->session->userdata('id')])->result();
-        $data['jns_course'] = $this->uri->segment(3);
         $data['file_url'] = $this->getMateri($this->uri->segment(3));
+        $data['learn_title'] = $this->M_data->get_learning_title();
 
         $this->load->view('template/user_content', $data);
     }
