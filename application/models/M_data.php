@@ -204,4 +204,34 @@ class M_data extends CI_Model
 
         return $query->result();
     }
+
+    function get_learning_detail($id_header)
+    {
+        $query = $this->db->query(
+            "SELECT
+                *
+            FROM
+                learning_detail
+            WHERE
+                learn_det_id_header = " . $id_header . "
+            ORDER BY
+                learn_det_desc ASC"
+        );
+
+        return $query->result();
+    }
+
+    function get_learning_detail_by_id($id_detail)
+    {
+        $query = $this->db->query(
+            "SELECT
+                *
+            FROM
+                learning_detail
+            WHERE
+                id_learn_det = " . $id_detail
+        );
+
+        return $query->result();
+    }
 }
