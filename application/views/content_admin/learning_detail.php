@@ -170,7 +170,7 @@
 
                     <div class="modal-body">
                         <div class="form-group">
-                            <?php if (file_exists('assets/img/banner-learning/' . $data->learn_det_banner_file)) { ?>
+                            <?php if (!empty($data->learn_det_banner_file)) { ?>
                                 <img src="<?php echo base_url('assets/img/banner-learning/' . $data->learn_det_banner_file); ?>" alt="Banner Sub Learning" style="width: 100%;">
                             <?php } else { ?>
                                 Banner belum diupload
@@ -207,7 +207,7 @@
 
                     <div class="modal-body">
                         <div class="form-group">
-                            <?php if (file_exists('assets/video/video-learning/' . $data->learn_det_video_file)) { ?>
+                            <?php if (!empty( $data->learn_det_video_file)) { ?>
                                 <video width="100%" height="100%" controls>
                                     <source src="<?php echo base_url('assets/video/video-learning/' . $data->learn_det_video_file) ?>" type="video/mp4">
                                     Your browser does not support the video tag.
