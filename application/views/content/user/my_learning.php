@@ -16,7 +16,7 @@
                                     $detail = $this->M_data->get_learning_detail($data_header->id_learn_head); ?>
                                     <ul>
                                     <?php foreach ($detail as $data_detail) { ?>
-                                        <li><a href="<?php echo base_url('C_user_my_learning/index/'.strtolower($data_detail->learn_det_desc)) ?>"><?php echo $data_detail->learn_det_desc; ?></a></li>
+                                        <li><a href="<?php echo base_url('C_user_my_learning/index/'. str_replace(' ','_',strtolower($data_detail->learn_det_desc))) ?>"><?php echo $data_detail->learn_det_desc; ?></a></li>
                                     <?php } ?>
                                     </ul>
                                 <?php } ?>

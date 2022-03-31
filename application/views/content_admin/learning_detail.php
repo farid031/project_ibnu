@@ -84,13 +84,15 @@
                             <input class="form-control" type="text" id="learn_detail" name="learn_detail" placeholder="Masukkan Nama Learning" required>
                         </div>
                         <div class="form-group">
-                            <label for="banner">Banner Sub Learning *</label>
-                            <input class="form-control" type="file" id="banner" name="banner" required accept="image/*">
+                            <label for="banner">Banner Sub Learning</label>
+                            <input class="form-control" type="file" id="banner" name="banner" accept="image/*">
+                            <small>* Kosongi, jika tidak ingin mengupload banner sub learning</small><br />
                             <small>* Ukuran file maksimal 5 MB</small>
                         </div>
                         <div class="form-group">
-                            <label for="video">Video Sub Learning *</label>
-                            <input class="form-control" type="file" id="video" name="video" required accept="video/*">
+                            <label for="video">Video Sub Learning</label>
+                            <input class="form-control" type="file" id="video" name="video" accept="video/*">
+                            <small>* Kosongi, jika tidak ingin mengupload video sub learning</small>
                         </div>
                     </div>
 
