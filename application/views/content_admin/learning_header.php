@@ -13,7 +13,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Data Learning</h3><br />
+                        <h3 class="box-title">Data Learning <?php echo ucwords(strtolower($learn_title[0]->learn_title_desc)) ?></h3><br />
                         <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal-input" title="tambah data learning"><i class="fas fa-plus"></i> Learning</button>
                     </div>
                     <!-- /.box-header -->
@@ -38,7 +38,7 @@
                                         <td><?php echo $data_learn->learn_head_desc; ?></td>
                                         <td><?php echo $data_learn->jml_header; ?></td>
                                         <td>
-                                            <a href="<?php echo base_url('C_admin_learning_detail/index/'. $data_learn->id_learn_head) ?>" target="_blank"><button style="width: 100px;" type="button" class="btn btn-primary" title="Lihat Data Sub Learning">Sub Learning</button></a> <button style="width: 60px;" type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit<?= $a; ?>" title="Edit Judul Learning">Edit</button> <button style="width: 60px;" class="btn btn-danger btn-md" onclick="hapusLearningHeader(<?php echo $data_learn->id_learn_head ?>)" title="Hapus Judul Learning">Hapus</button>
+                                            <a href="<?php echo base_url('C_admin_learning_detail/index/' . $data_learn->id_learn_head) ?>" target="_blank"><button style="width: 100px;" type="button" class="btn btn-primary" title="Lihat Data Sub Learning">Sub Learning</button></a> <button style="width: 60px;" type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit<?= $a; ?>" title="Edit Judul Learning">Edit</button> <button style="width: 60px;" class="btn btn-danger btn-md" onclick="hapusLearningHeader(<?php echo $data_learn->id_learn_head ?>)" title="Hapus Judul Learning">Hapus</button>
                                         </td>
                                     </tr>
                                 <?php $a++;
@@ -68,7 +68,7 @@
     <div class="modal fade" id="modal-input">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form role="form" method="post" action="<?php echo base_url('C_admin_learning_header/input_learn_header/'. $this->uri->segment(3)); ?>" enctype="multipart/form-data" accept-charset="utf-8">
+                <form role="form" method="post" action="<?php echo base_url('C_admin_learning_header/input_learn_header/' . $this->uri->segment(3)); ?>" enctype="multipart/form-data" accept-charset="utf-8">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span></button>
@@ -101,7 +101,7 @@
         <div class="modal fade" id="modal-edit<?= $y++; ?>">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form role="form" method="post" action="<?php echo base_url('C_admin_learning_header/update_learn_header/' . $data->id_learn_head.'-'.$data_learn->learn_head_id_title); ?>" enctype="multipart/form-data" accept-charset="utf-8">
+                    <form role="form" method="post" action="<?php echo base_url('C_admin_learning_header/update_learn_header/' . $data->id_learn_head . '-' . $data_learn->learn_head_id_title); ?>" enctype="multipart/form-data" accept-charset="utf-8">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span></button>

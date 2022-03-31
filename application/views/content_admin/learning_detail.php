@@ -13,7 +13,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Data Sub Learning</h3><br />
+                        <h3 class="box-title">Data Sub Learning <?php echo ucwords(strtolower($learn_head[0]->learn_head_desc)) ?></h3><br />
                         <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal-input" title="tambah data learning"><i class="fas fa-plus"></i> Sub Learning</button>
                     </div>
                     <!-- /.box-header -->

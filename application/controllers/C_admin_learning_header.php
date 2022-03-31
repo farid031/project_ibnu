@@ -24,6 +24,7 @@ class C_admin_learning_header extends CI_Controller
         $data['content'] = 'content_admin/learning_header';
         $data['title']     = 'Admin Engineer Nusantara';
         $data['learn_header'] = $this->M_data->get_learning_header($id_title);
+        $data['learn_title'] = $this->M_data->get_data_where('learning_title', ['id_learn_title' => $id_title])->result();
 
         $this->load->view('template_admin/content', $data);
     }
