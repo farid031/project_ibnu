@@ -63,7 +63,8 @@
                     <li><a href="<?php echo base_url('C_user_my_learning/index/rendering') ?>">RENDERING</a></li>
                 </ul> -->
             </div>
-            <div style="padding-top: 80px; background-color: #E3EBE8; width: 67%;">
+            <div style="padding-top: 20px; background-color: #E3EBE8; width: 67%;">
+                <h1><?php echo $learn_detail_judul[0]->learn_det_desc ?></h1>                            
                 <?php
                 if ($this->session->userdata('is_registered') == TRUE) {
                     if (!empty($video_url)) { ?>

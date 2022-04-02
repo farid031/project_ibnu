@@ -22,6 +22,7 @@ class C_user_my_learning extends CI_Controller
         $data['thumb_url'] = $this->getThumb($this->uri->segment(3));
         $data['video_url'] = $this->getVideo($this->uri->segment(3));
         $data['learn_title'] = $this->M_data->get_learning_title();
+        $data['learn_detail_judul'] = $this->M_data->get_learning_detail_by_id($this->uri->segment(3));
 
         $this->load->view('template/user_content', $data);
     }
