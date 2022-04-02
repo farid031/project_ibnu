@@ -234,4 +234,21 @@ class M_data extends CI_Model
 
         return $query->result();
     }
+
+    function get_user()
+    {
+        $query = $this->db->query(
+            "SELECT
+                *
+            FROM
+                user
+            WHERE
+                user_is_admin IS NULL
+            ORDER BY
+                user_is_registered DESC,
+                user_name ASC"
+        );
+
+        return $query->result();
+    }
 }

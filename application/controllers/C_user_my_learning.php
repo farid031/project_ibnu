@@ -19,13 +19,14 @@ class C_user_my_learning extends CI_Controller
         $data['content'] = 'content/user/my_learning';
         $data['title']     = 'Engineer Nusantara';
         $data['user'] = $this->db->get_where('user', ['id_user' => $this->session->userdata('id')])->result();
-        $data['file_url'] = $this->getMateri($this->uri->segment(3));
+        $data['thumb_url'] = $this->getThumb($this->uri->segment(3));
+        $data['video_url'] = $this->getVideo($this->uri->segment(3));
         $data['learn_title'] = $this->M_data->get_learning_title();
 
         $this->load->view('template/user_content', $data);
     }
 
-    public function getMateri($jns_course)
+    /* public function getThumb($jns_course)
     {
         if ($jns_course === 'sketching') {
             $file = base_url('assets/img/my_learning_thumb/'.$jns_course.'.jpg');
@@ -59,6 +60,25 @@ class C_user_my_learning extends CI_Controller
             $file = base_url('assets/img/my_learning_thumb/' . $jns_course . '.jpg');
         } elseif ($jns_course === 'rendering') {
             $file = base_url('assets/img/my_learning_thumb/' . $jns_course . '.jpg');
+        } else {
+            $file = '';
+        }
+
+        return $file;
+    } */
+
+    public function getThumb($id_learn_detail)
+    {
+        $file = base_url('assets/img/banner-learning/banner_learning_' . $id_learn_detail . '.jpg');
+
+        return $file;
+    }
+
+    public function getVideo($id_learn_detail)
+    {
+        $file_video = 'assets/video/video-learning/video_learning_' . $id_learn_detail . '.mp4';
+        if (file_exists($file_video) === TRUE) {
+            $file = base_url($file_video);
         } else {
             $file = '';
         }

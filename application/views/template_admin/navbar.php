@@ -75,7 +75,7 @@
                     </li>
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-pie-chart"></i>
+                            <i class="fas fa-cogs"></i>
                             <span>Setting Landing Page</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
@@ -88,19 +88,19 @@
                     </li>
                     <li>
                         <a href="<?php echo base_url('C_admin_setting_beranda') ?>">
-                            <i class="fa fa-pie-chart"></i>
+                            <i class="fas fa-cogs"></i>
                             <span>Beranda User</span>
                         </a>
                     </li>
                     <li>
                         <a href="<?php echo base_url('C_admin_learning') ?>">
-                            <i class="fa fa-pie-chart"></i>
+                            <i class="fas fa-graduation-cap"></i>
                             <span>Learning</span>
                         </a>
                     </li>
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-laptop"></i>
+                            <i class="fas fa-certificate"></i>
                             <span>Sertifikat</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
@@ -113,8 +113,14 @@
                     </li>
                     <li>
                         <a href="<?php echo base_url('C_admin_catalog') ?>" target="_self">
-                            <i class="fa fa-pie-chart"></i>
-                            <span>Catalog</span>
+                            <i class="fas fa-book"></i>
+                            <span>Katalog</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('C_admin_setting_user') ?>" target="_self">
+                            <i class="fas fa-user-cog"></i>
+                            <span>Peserta</span>
                         </a>
                     </li>
                 </ul>

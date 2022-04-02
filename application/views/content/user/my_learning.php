@@ -3,27 +3,27 @@
         <div class="row">
             <div style="padding: 20px; margin-right: 20px; background-color: #FAC100; width: 30%;">
                 <?php
-                    $this->load->model('M_data');
+                $this->load->model('M_data');
 
-                    foreach ($learn_title as $data_title) { ?>
-                        <h1><b><?php echo $data_title->learn_title_desc; ?></b></h1>
-                        <?php if ($data_title->jml_header > 0) { 
-                            $header = $this->M_data->get_learning_header($data_title->id_learn_title); ?>
-                            <ul style="font-weight: bold;">
+                foreach ($learn_title as $data_title) { ?>
+                    <h1><b><?php echo $data_title->learn_title_desc; ?></b></h1>
+                    <?php if ($data_title->jml_header > 0) {
+                        $header = $this->M_data->get_learning_header($data_title->id_learn_title); ?>
+                        <ul style="font-weight: bold;">
                             <?php foreach ($header as $data_header) { ?>
                                 <li><?php echo $data_header->learn_head_desc; ?></li>
                                 <?php if ($data_header->jml_header > 0) {
                                     $detail = $this->M_data->get_learning_detail($data_header->id_learn_head); ?>
                                     <ul>
-                                    <?php foreach ($detail as $data_detail) { ?>
-                                        <li><a href="<?php echo base_url('C_user_my_learning/index/'. str_replace(' ','_',strtolower($data_detail->learn_det_desc))) ?>"><?php echo $data_detail->learn_det_desc; ?></a></li>
-                                    <?php } ?>
+                                        <?php foreach ($detail as $data_detail) { ?>
+                                            <li><a href="<?php echo base_url('C_user_my_learning/index/' . $data_detail->id_learn_det) ?>"><?php echo $data_detail->learn_det_desc; ?></a></li>
+                                        <?php } ?>
                                     </ul>
                                 <?php } ?>
                             <?php } ?>
-                            </ul>
-                        <?php }?>
-                    <?php }
+                        </ul>
+                    <?php } ?>
+                <?php }
                 ?>
                 <!-- <h1><b>SOLIDWORKS</b></h1>
                 <ul style="font-weight: bold;">
@@ -65,10 +65,20 @@
             </div>
             <div style="padding-top: 80px; background-color: #E3EBE8; width: 67%;">
                 <?php
-                if (!empty($file_url)) { ?>
-                    <img src="<?php echo $file_url ?>" alt="My Learning" height="100%" width="100%" style="border-radius: 10px;">
+                if ($this->session->userdata('is_registered') == TRUE) {
+                    if (!empty($video_url)) { ?>
+                        <video width="100%" height="100%" controls>
+                            <source src="<?php echo $video_url ?>" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    <?php } else {
+                        echo '<h1>Video tidak tersedia</h1>';
+                    }
+                } else {
+                    if (!empty($thumb_url)) { ?>
+                        <img src="<?php echo $thumb_url ?>" alt="My Learning" height="100%" width="100%" style="border-radius: 10px;">
                 <?php }
-                ?>
+                } ?>
             </div>
         </div>
     </div>

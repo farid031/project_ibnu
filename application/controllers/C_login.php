@@ -30,11 +30,12 @@ class C_login extends CI_Controller
             if (password_verify($pass, $hasil->user_pass)) {
                 // membuat session
                 $userdata = array(
-                    'id' => $hasil->id_user,
-                    'email' => $hasil->user_email,
-                    'nama' => $hasil->user_name,
-                    'is_login' => TRUE,
-                    'is_admin' => ($hasil->user_is_admin == 1 ? TRUE : FALSE),
+                    'id'            => $hasil->id_user,
+                    'email'         => $hasil->user_email,
+                    'nama'          => $hasil->user_name,
+                    'is_registered' => ($hasil->user_is_registered == 1 ? true : false),
+                    'is_login'      => TRUE,
+                    'is_admin'      => ($hasil->user_is_admin == 1 ? TRUE : FALSE),
                 );
 
                 $this->session->set_userdata($userdata);
