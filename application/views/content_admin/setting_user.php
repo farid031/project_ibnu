@@ -48,7 +48,7 @@
                                             <?php if ($data_usr->user_is_registered == '1') { ?>
                                                 <button style="width: 60px;" type="button" class="btn btn-danger" title="Batalkan Registrasi Peserta" onclick="unregUser(<?php echo $data_usr->id_user ?>)">Unreg</button>
                                             <?php } else { ?>
-                                                <button style="width: 60px;" type="button" class="btn btn-success" title="Registrasikan Peserta" onclick="regUser(<?php echo $data_usr->id_user ?>)">Reg</button>
+                                                <button style="width: 60px;" type="button" class="btn btn-success" title="Setujui Registrasi Peserta" onclick="regUser(<?php echo $data_usr->id_user ?>)">Reg</button>
                                             <?php } ?>
                                         </td>
                                     </tr>
