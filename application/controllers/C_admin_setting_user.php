@@ -49,4 +49,22 @@ class C_admin_setting_user extends CI_Controller
     {
         $this->M_data->hapus_data('learning_header', 'id_learn_head = ' . $_POST['id_learn_head']);
     }
+
+    public function reg_user()
+    {
+        $data = array(
+            'user_is_registered' => 1
+        );
+
+        $this->M_data->update_data('user', $data, 'id_user = ' . $_POST['id_user']);
+    }
+
+    public function unreg_user()
+    {
+        $data = array(
+            'user_is_registered' => 0
+        );
+
+        $this->M_data->update_data('user', $data, 'id_user = ' . $_POST['id_user']);
+    }
 }

@@ -428,6 +428,58 @@
         })
     }
 
+    function regUser(id_user) {
+        Swal.fire({
+            title: 'Apakah Anda Yakin?',
+            text: "Anda akan menyetujui registrasi user",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ya, yakin!',
+            cancelButtonText: 'Batal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: "POST",
+                    url: "<?php echo base_url('C_admin_setting_user/reg_user'); ?>",
+                    data: {
+                        id_user: id_user
+                    },
+                    success: (data) => {
+                        window.location.reload();
+                    }
+                });
+            }
+        })
+    }
+
+    function unregUser(id_user) {
+        Swal.fire({
+            title: 'Apakah Anda Yakin?',
+            text: "Anda akan membatalkan registrasi user",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ya, yakin!',
+            cancelButtonText: 'Batal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: "POST",
+                    url: "<?php echo base_url('C_admin_setting_user/unreg_user'); ?>",
+                    data: {
+                        id_user: id_user
+                    },
+                    success: (data) => {
+                        window.location.reload();
+                    }
+                });
+            }
+        })
+    }
+
     $().ready(() => {
         $('#jns_sertifikat').DataTable({
             "paging": true,

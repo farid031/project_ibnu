@@ -64,7 +64,7 @@
                 </ul> -->
             </div>
             <div style="padding-top: 20px; background-color: #E3EBE8; width: 67%;">
-                <h1><?php echo $learn_detail_judul[0]->learn_det_desc ?></h1>                            
+                <h1><?php echo (!empty($learn_detail_judul) ? $learn_detail_judul[0]->learn_det_desc : '') ?></h1>                            
                 <?php
                 if ($this->session->userdata('is_registered') == TRUE) {
                     if (!empty($video_url)) { ?>
@@ -78,7 +78,9 @@
                 } else {
                     if (!empty($thumb_url)) { ?>
                         <img src="<?php echo $thumb_url ?>" alt="My Learning" height="100%" width="100%" style="border-radius: 10px;">
-                <?php }
+                <?php } else {
+                    echo '';
+                }
                 } ?>
             </div>
         </div>

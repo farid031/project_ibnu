@@ -19,10 +19,17 @@ class C_user_my_learning extends CI_Controller
         $data['content'] = 'content/user/my_learning';
         $data['title']     = 'Engineer Nusantara';
         $data['user'] = $this->db->get_where('user', ['id_user' => $this->session->userdata('id')])->result();
-        $data['thumb_url'] = $this->getThumb($this->uri->segment(3));
-        $data['video_url'] = $this->getVideo($this->uri->segment(3));
+
+        if (!empty($this->uri->segment(3))) {
+            $id_detail = $this->uri->segment(3);
+        } else {
+            $id_detail = 0;
+        }
+        
+        $data['thumb_url'] = $this->getThumb($id_detail);
+        $data['video_url'] = $this->getVideo($id_detail);
         $data['learn_title'] = $this->M_data->get_learning_title();
-        $data['learn_detail_judul'] = $this->M_data->get_learning_detail_by_id($this->uri->segment(3));
+        $data['learn_detail_judul'] = $this->M_data->get_learning_detail_by_id($id_detail);
 
         $this->load->view('template/user_content', $data);
     }
