@@ -14,7 +14,7 @@
                 <div class="box">
                     <div class="box-header">
                         <h3 class="box-title">Data Peserta</h3><br />
-                        <!-- <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal-input" title="tambah data learning"><i class="fas fa-plus"></i> Learning</button> -->
+                        <a href="<?php echo base_url('C_admin_setting_user/export_excel_peserta') ?>" target="_blank"><button class="btn btn-success btn-sm" title="Download Data Peserta"><i class="fas fa-download"></i> Peserta</button></a>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body table-responsive">
