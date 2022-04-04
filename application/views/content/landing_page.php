@@ -71,7 +71,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="about-img">
-                    <video width="100%" height="100%" controls>
+                    <video width="100%" height="100%" controls controlsList="nodownload">
                         <source src="<?php echo base_url('assets/img/compro-en.mp4') ?>" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
