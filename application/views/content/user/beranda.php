@@ -11,8 +11,8 @@
                 <p style="font-weight: bold; font-size: 40px;"><?php echo $user[0]->user_name ?></p>
                 <div class="row" align="center" style="padding-left: 20px;">
                     <div align="center" class="level"><?php echo ($user[0]->user_is_registered == '0' ? 'Pemula' : 'Pemula') ?></div>
-                    <div align="center" class="badges"><?php echo ($user[0]->user_is_registered == '0' ? 0 : 100) ?></div>
-                    <div align="center" class="certificate"><?php echo ($user[0]->user_is_registered == '0' ? 0 : 100) ?></div>
+                    <div align="center" class="badges"><?php echo ($user[0]->user_is_registered == '0' ? 0 : (!empty($count_badges) ? $count_badges[0]->jml_badges : 0)) ?></div>
+                    <div align="center" class="certificate"><?php echo ($user[0]->user_is_registered == '0' ? 0 : (!empty($count_certificates) ? $count_certificates[0]->jml_cert : 0)) ?></div>
                 </div>
             </div>
         </div>

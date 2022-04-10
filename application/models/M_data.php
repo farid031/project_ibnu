@@ -315,4 +315,32 @@ class M_data extends CI_Model
 
         return $query->result();
     }
+
+    function count_badges($id_user)
+    {
+        $query = $this->db->query(
+            "SELECT
+                COUNT(learn_dt_usr_id) AS jml_badges
+            FROM
+                learning_dt_user
+            WHERE
+                learn_dt_usr_id = ".$id_user
+        );
+
+        return $query->result();
+    }
+
+    function count_certificates($id_user)
+    {
+        $query = $this->db->query(
+            "SELECT
+                COUNT(id_cert) AS jml_cert
+            FROM
+                certificate
+            WHERE
+                cert_id_user = " . $id_user
+        );
+
+        return $query->result();
+    }
 }
