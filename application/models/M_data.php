@@ -251,4 +251,68 @@ class M_data extends CI_Model
 
         return $query->result();
     }
+
+    function get_sub_materi_user($id_learn_det)
+    {
+        $query = $this->db->query(
+            "SELECT
+                *
+            FROM
+                learning_dt_user
+                LEFT JOIN user ON learn_dt_usr_id = id_user
+            WHERE
+                learn_dt_usr_learn_id = ".$id_learn_det. "
+                AND user_is_registered IS TRUE
+            ORDER BY
+                user_name ASC"
+        );
+
+        return $query->result();
+    }
+
+    function get_user_learn_det($id_learn_det)
+    {
+        $id_usr = $this->get_user_assigned($id_learn_det);
+        $query = $this->db->query(
+            "SELECT
+                *
+            FROM
+                user
+            WHERE
+                user_is_registered IS TRUE
+                AND id_user NOT IN (".(!empty($id_usr[0]->id_user) ? $id_usr[0]->id_user : 0).")
+            ORDER BY
+                user_name ASC"
+        );
+
+        return $query->result();
+    }
+
+    function get_user_assigned($id_learn_det)
+    {
+        $query = $this->db->query(
+            "SELECT GROUP_CONCAT( learn_dt_usr_id ) AS id_user FROM learning_dt_user WHERE learn_dt_usr_learn_id = ". $id_learn_det
+        );
+
+        return $query->result();
+    }
+
+    function get_user_is_assign($learn_desc)
+    {
+        $query = $this->db->query(
+            "SELECT
+                *
+            FROM
+                learning_dt_user
+                LEFT JOIN user ON learn_dt_usr_id = id_user
+                LEFT JOIN learning_detail ON learn_dt_usr_learn_id = id_learn_det
+            WHERE
+                learn_det_desc = '".strtoupper($learn_desc). "'
+                AND learn_dt_usr_id = ".$this->session->userdata('id')."
+            ORDER BY
+                user_name ASC"
+        );
+
+        return $query->result();
+    }
 }

@@ -25,55 +25,23 @@
                     <?php } ?>
                 <?php }
                 ?>
-                <!-- <h1><b>SOLIDWORKS</b></h1>
-                <ul style="font-weight: bold;">
-                    <li>ESSENTIAL</li>
-                    <ul>
-                        <li><a href="<?php echo base_url('C_user_my_learning/index/sketching') ?>">SKETCHING</a></li>
-                        <li><a href="<?php echo base_url('C_user_my_learning/index/3d_modeling') ?>">3D MODELING</a></li>
-                        <li><a href="<?php echo base_url('C_user_my_learning/index/assembly') ?>">ASSEMBLY</a></li>
-                        <li><a href="<?php echo base_url('C_user_my_learning/index/drawing') ?>">DRAWING</a></li>
-                    </ul><br />
-                    <li>INTERMEDIATE</li>
-                    <ul>
-                        <li><a href="<?php echo base_url('C_user_my_learning/index/weldment') ?>">WELDMENT</a></li>
-                        <li><a href="<?php echo base_url('C_user_my_learning/index/sheet_metal') ?>">SHEET METAL</a></li>
-                        <li><a href="<?php echo base_url('C_user_my_learning/index/surface') ?>">SURFACE</a></li>
-                        <li><a href="<?php echo base_url('C_user_my_learning/index/mold') ?>">MOLD</a></li>
-                        <li><a href="<?php echo base_url('C_user_my_learning/index/routing') ?>">ROUTING</a></li>
-                    </ul><br />
-                    <li>ADVANCED</li>
-                    <ul>
-                        <li><a href="<?php echo base_url('C_user_my_learning/index/simulation') ?>">SIMULATION</a></li>
-                        <li><a href="<?php echo base_url('C_user_my_learning/index/motion_analysys') ?>">MOTION ANALYSIS</a></li>
-                        <li><a href="<?php echo base_url('C_user_my_learning/index/flow_simulation') ?>">FLOW SIMULATION</a></li>
-                        <li><a href="<?php echo base_url('C_user_my_learning/index/cam') ?>">CAM</a></li>
-                    </ul>
-                </ul><br />
-                <h1><b>ANSYS</b></h1>
-                <ul style="font-weight: bold;">
-                    <li><a href="<?php echo base_url('C_user_my_learning/index/internal_flow') ?>">INTERNAL FLOW</a></li>
-                    <li><a href="<?php echo base_url('C_user_my_learning/index/external_flow') ?>">EXTERNAL FLOW</a></li>
-                </ul><br />
-                <h1><b>SKETCHUP</b></h1>
-                <ul style="font-weight: bold;">
-                    <li><a href="<?php echo base_url('C_user_my_learning/index/sketching') ?>">SKETCHING</a></li>
-                    <li><a href="<?php echo base_url('C_user_my_learning/index/3d_modeling') ?>">3D MODELING</a></li>
-                    <li><a href="<?php echo base_url('C_user_my_learning/index/assembly') ?>">ASSEMBLY</a></li>
-                    <li><a href="<?php echo base_url('C_user_my_learning/index/rendering') ?>">RENDERING</a></li>
-                </ul> -->
             </div>
             <div style="padding-top: 20px; background-color: #E3EBE8; width: 67%;">
                 <h1><?php echo (!empty($learn_detail_judul) ? $learn_detail_judul[0]->learn_det_desc : '') ?></h1>                            
                 <?php
+                $assign_user = $this->M_data->get_user_is_assign((!empty($learn_detail_judul) ? $learn_detail_judul[0]->learn_det_desc : ''));
                 if ($this->session->userdata('is_registered') == TRUE) {
-                    if (!empty($video_url)) { ?>
-                        <video width="100%" height="100%" controls controlsList="nodownload">
-                            <source src="<?php echo $video_url ?>" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    <?php } else {
-                        echo '<h1>Video tidak tersedia</h1>';
+                    if (!empty($assign_user)) {
+                        if (!empty($video_url)) { ?>
+                            <video width="100%" height="100%" controls controlsList="nodownload">
+                                <source src="<?php echo $video_url ?>" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <?php } else {
+                            echo '<h1>Video tidak tersedia</h1>';
+                        }
+                    } else {
+                        echo '<h1>Anda Tidak Terdaftar di Sub Materi Ini</h1>';
                     }
                 } else {
                     if (!empty($thumb_url)) { ?>

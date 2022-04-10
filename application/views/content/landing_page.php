@@ -458,7 +458,7 @@
             <div class="col-lg-5 col-md-6" style="background-color: white; text-align: center; align-items: center; padding: 20px;">
                 <i class="fab fa-whatsapp fa-3x" style="color: #FAC100;"></i>
                 <h3>Whatsapp</h3>
-                <p><a href="https://api.whatsapp.com/send?phone=6287856207709&text=Halo%2C+engineer+nusantara%2C+biasakah+Anda+membantu+permasalahan+saya%3F" target="_blank">087856207709</a></p>
+                <p><a href="https://api.whatsapp.com/send?phone=62817183124&text=Halo%2C+engineer+nusantara%2C+biasakah+Anda+membantu+permasalahan+saya%3F" target="_blank">0817183124</a></p>
             </div>
         </div>
     </div>

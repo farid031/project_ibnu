@@ -214,4 +214,26 @@ class C_admin_learning_detail extends CI_Controller
 
         $this->M_data->hapus_data('learning_detail', 'id_learn_det = ' . $_POST['id_detail']);
     }
+
+    public function assign_peserta()
+    {
+        $id_learn_det = $_POST['learn_det'];
+        $id_user = $_POST['id_user'];
+
+        foreach ($id_user as $user) {
+            $data = array(
+                'learn_dt_usr_learn_id' => $id_learn_det,
+                'learn_dt_usr_id' => $user,
+                'learn_dt_usr_created_by' => $this->session->userdata('id'),
+                'learn_dt_usr_created_at' => date('Y-m-d H:i:s')
+            );
+
+            $this->M_data->simpan_data('learning_dt_user', $data);
+        }
+    }
+
+    public function delete_entry_peserta()
+    {
+        $this->M_data->hapus_data('learning_dt_user', 'learn_dt_usr_learn_id = ' . $_POST['id_learn_det']. ' AND learn_dt_usr_id = '.$_POST['id_user']);
+    }
 }

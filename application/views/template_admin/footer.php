@@ -244,6 +244,8 @@
 <script src="<?php echo base_url('assets/template_admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js') ?>"></script>
 <!-- Sweet Alert 2 -->
 <script src="<?php echo base_url('assets/js/sweetalert2.min.js') ?>"></script>
+<!-- select2 -->
+<script src="<?php echo base_url('assets/template_admin/bower_components/select2/dist/js/select2.full.min.js') ?>"></script>
 
 <script>
     function hapusJnsSertifikat(id_jns) {
@@ -353,7 +355,7 @@
     function hapusLearningTitle(id_title) {
         Swal.fire({
             title: 'Apakah Anda Yakin?',
-            text: "Data Judul Learning yang telah dihapus tidak dapat dikembalikan",
+            text: "Data Software yang telah dihapus tidak dapat dikembalikan",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
@@ -379,7 +381,7 @@
     function hapusLearningHeader(id_header) {
         Swal.fire({
             title: 'Apakah Anda Yakin?',
-            text: "Data Learning yang telah dihapus tidak dapat dikembalikan",
+            text: "Data Materi yang telah dihapus tidak dapat dikembalikan",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
@@ -405,7 +407,7 @@
     function hapusLearningDetail(id_detail) {
         Swal.fire({
             title: 'Apakah Anda Yakin?',
-            text: "Data Sub Learning yang telah dihapus tidak dapat dikembalikan",
+            text: "Data Sub Materi yang telah dihapus tidak dapat dikembalikan",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
@@ -480,6 +482,52 @@
         })
     }
 
+    function saveUserSubMateri(id_learn_det) {
+        let param = id_learn_det.split("-");
+        let user = $("#nama_peserta_sub_materi_" + param[1]).val();
+
+        $.ajax({
+            type: "POST",
+            url: "<?php echo base_url('C_admin_learning_detail/assign_peserta'); ?>",
+            data: {
+                learn_det: id_learn_det[0],
+                id_user: user
+            },
+            success: (data) => {
+                window.location.reload();
+            }
+        });
+    }
+
+    function hapusEntryPeserta(id_user) {
+        Swal.fire({
+            title: 'Apakah Anda Yakin?',
+            text: "Anda akan menghapus peserta ini.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ya, yakin!',
+            cancelButtonText: 'Batal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                let param = id_user.split("-");
+
+                $.ajax({
+                    type: "POST",
+                    url: "<?php echo base_url('C_admin_learning_detail/delete_entry_peserta'); ?>",
+                    data: {
+                        id_user: id_user[0],
+                        id_learn_det: param[1]
+                    },
+                    success: (data) => {
+                        window.location.reload();
+                    }
+                });
+            }
+        })
+    }
+
     $().ready(() => {
         $('#jns_sertifikat').DataTable({
             "paging": true,
@@ -489,6 +537,17 @@
             "info": true,
             "autoWidth": true
         });
+
+        $('#table_catalog_user').DataTable({
+            "paging": true,
+            "lengthChange": true,
+            "searching": true,
+            "ordering": true,
+            "info": true,
+            "autoWidth": true
+        });
+
+        $('.select2').select2();
     });
 </script>
 </body>

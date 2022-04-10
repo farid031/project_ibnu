@@ -3,7 +3,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Learning
+            Software
         </h1>
     </section>
 
@@ -13,8 +13,8 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Data Judul Learning</h3><br />
-                        <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal-input" title="tambah data judul learning"><i class="fas fa-plus"></i> Judul Learning</button>
+                        <h3 class="box-title">Data Software</h3><br />
+                        <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal-input" title="tambah data software"><i class="fas fa-plus"></i> Software</button>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body table-responsive">
@@ -22,8 +22,8 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Judul Learning</th>
-                                    <th>Jumlah Learning</th>
+                                    <th>Nama Software</th>
+                                    <th>Jumlah Materi</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -38,7 +38,7 @@
                                         <td><?php echo $data_learn->learn_title_desc; ?></td>
                                         <td><?php echo $data_learn->jml_header; ?></td>
                                         <td>
-                                            <a href="<?php echo base_url('C_admin_learning_header/index/'. $data_learn->id_learn_title) ?>" target="_blank"><button style="width: 80px;" type="button" class="btn btn-primary" title="Lihat Data Learning">Learning</button></a> <button style="width: 60px;" type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit<?= $a; ?>" title="Edit Judul Learning">Edit</button> <button style="width: 60px;" class="btn btn-danger btn-md" onclick="hapusLearningTitle(<?php echo $data_learn->id_learn_title ?>)" title="Hapus Judul Learning">Hapus</button>
+                                            <a href="<?php echo base_url('C_admin_learning_header/index/' . $data_learn->id_learn_title) ?>" target="_blank"><button type="button" class="btn btn-primary" title="Lihat Data Software"><i class="fas fa-info"></i></button></a> <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit<?= $a; ?>" title="Edit Data Software"><i class="fas fa-pen"></i></button> <button class="btn btn-danger btn-md" onclick="hapusLearningTitle(<?php echo $data_learn->id_learn_title ?>)" title="Hapus Data Software"><i class="fas fa-trash-alt"></i></button>
                                         </td>
                                     </tr>
                                 <?php $a++;
@@ -47,8 +47,8 @@
                             <tfoot>
                                 <tr>
                                     <th>No</th>
-                                    <th>Judul Learning</th>
-                                    <th>Jumlah Learning</th>
+                                    <th>Nama Software</th>
+                                    <th>Jumlah Materi</th>
                                     <th>Aksi</th>
                                 </tr>
                             </tfoot>
@@ -72,13 +72,13 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">Input Data Judul Learning</h4>
+                        <h4 class="modal-title">Input Data Software</h4>
                     </div>
 
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="learn_title">Nama Judul Learning *</label>
-                            <input class="form-control" type="text" id="learn_title" name="learn_title" placeholder="Masukkan Nama Judul Learning" required>
+                            <label for="learn_title">Nama Software *</label>
+                            <input class="form-control" type="text" id="learn_title" name="learn_title" placeholder="Masukkan Nama Software" required>
                         </div>
                     </div>
 
@@ -105,13 +105,13 @@
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title">Edit Data Judul Learning</h4>
+                            <h4 class="modal-title">Edit Data Software</h4>
                         </div>
 
                         <div class="modal-body">
                             <div class="form-group">
-                                <label for="learn_title">Nama Judul Learning *</label>
-                                <input class="form-control" type="text" id="learn_title" name="learn_title" placeholder="Masukkan Nama Judul Learning" required value="<?php echo $data->learn_title_desc ?>">
+                                <label for="learn_title">Nama Software *</label>
+                                <input class="form-control" type="text" id="learn_title" name="learn_title" placeholder="Masukkan Nama Software" required value="<?php echo $data->learn_title_desc ?>">
                             </div>
                         </div>
 

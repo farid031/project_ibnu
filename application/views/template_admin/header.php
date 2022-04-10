@@ -38,6 +38,8 @@
   <link href="<?php echo base_url('assets/lib/fontawesome-5.15.4/css/all.min.css') ?>" rel="stylesheet">
   <!-- Sweet Alert 2 -->
   <link href="<?php echo base_url('assets/css/sweetalert2.scss') ?>" rel="stylesheet">
+  <!--Select2-->
+  <link rel="stylesheet" href="<?php echo base_url('assets/template_admin/bower_components/select2/dist/css/select2.min.css') ?>">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
