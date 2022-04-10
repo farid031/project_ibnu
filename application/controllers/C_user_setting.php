@@ -71,6 +71,17 @@ class C_user_setting extends CI_Controller
 
             die($error);
         } else {
+            $configger['image_library']    = 'gd2';
+            $configger['source_image']     = 'assets/img/avatar/' . $config['file_name'];
+            $configger['quality']          = '50%';
+            $configger['width']            = 600;
+            $configger['height']           = 600;
+            $configger['create_thumb']     = FALSE;
+            $configger['maintain_ratio']   = FALSE;
+            $configger['new_image']        = 'assets/img/avatar/' . $config['file_name'];
+            $this->load->library('image_lib', $configger);
+            $this->image_lib->resize();
+
             $data = array(
                 'user_avatar' => $config['file_name'].$this->upload->data('file_ext')
             );

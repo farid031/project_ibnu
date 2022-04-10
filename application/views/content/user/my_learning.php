@@ -41,7 +41,8 @@
                             echo '<h1>Video tidak tersedia</h1>';
                         }
                     } else {
-                        echo '<h1>Anda Tidak Terdaftar di Sub Materi Ini</h1>';
+                        echo '<h1>Anda Tidak Terdaftar di Sub Materi Ini</h1><br/>
+                        <h2>untuk mendaftar pada sub materi ini, silahkan klik <a href="'. base_url('C_catalog').'">di sini</a></h2>';
                     }
                 } else {
                     if (!empty($thumb_url)) { ?>
