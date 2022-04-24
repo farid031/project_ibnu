@@ -32,17 +32,17 @@
                 $assign_user = $this->M_data->get_user_is_assign((!empty($learn_detail_judul) ? $learn_detail_judul[0]->learn_det_desc : ''));
                 if ($this->session->userdata('is_registered') == TRUE) {
                     if (!empty($assign_user)) {
-                        foreach ($video_url as $data) {
-                            if (!empty($data)) { ?>
-                                <div>
-                                    <video width="80%" height="80%" controls controlsList="nodownload">
-                                        <source src="<?php echo $data ?>" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </div>
-                        <?php } else {
-                                echo '<h1>Video tidak tersedia</h1>';
-                            }
+                        if (!empty($video_url)) {
+                            foreach ($video_url as $data) { ?>
+                                    <div>
+                                        <video width="80%" height="80%" controls controlsList="nodownload">
+                                            <source src="<?php echo $data ?>" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                        <?php }
+                        } else {
+                            echo '<h1>Video tidak tersedia</h1>';
                         }
                     } else {
                         echo '<h1>Anda Tidak Terdaftar di Sub Materi Ini</h1><br/>
