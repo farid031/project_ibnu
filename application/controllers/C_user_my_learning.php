@@ -84,13 +84,21 @@ class C_user_my_learning extends CI_Controller
 
     public function getVideo($id_learn_detail)
     {
-        $file_video = 'assets/video/video-learning/video_learning_' . $id_learn_detail . '.mp4';
-        if (file_exists($file_video) === TRUE) {
-            $file = base_url($file_video);
-        } else {
-            $file = '';
+        $video = $this->M_data->get_data_where('learning_detail_video', array('vid_learn_id_learn_det' => $id_learn_detail))->result();
+
+        $file = [];
+        $empty = '';
+        foreach ($video as $data) {
+            $file_video = 'assets/video/video-learning/' . $data->vid_learn_url;
+            if (file_exists($file_video) === TRUE) {
+                array_push($file, base_url($file_video));
+            }
         }
 
-        return $file;
+        if (count($file) > 0) {
+            return $file;
+        } else {
+            return $empty;
+        }        
     }
 }

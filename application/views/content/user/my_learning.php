@@ -27,29 +27,33 @@
                 ?>
             </div>
             <div style="padding-top: 20px; background-color: #E3EBE8; width: 67%;">
-                <h1><?php echo (!empty($learn_detail_judul) ? $learn_detail_judul[0]->learn_det_desc : '') ?></h1>                            
+                <h1><?php echo (!empty($learn_detail_judul) ? $learn_detail_judul[0]->learn_det_desc : '') ?></h1>
                 <?php
                 $assign_user = $this->M_data->get_user_is_assign((!empty($learn_detail_judul) ? $learn_detail_judul[0]->learn_det_desc : ''));
                 if ($this->session->userdata('is_registered') == TRUE) {
                     if (!empty($assign_user)) {
-                        if (!empty($video_url)) { ?>
-                            <video width="100%" height="100%" controls controlsList="nodownload">
-                                <source src="<?php echo $video_url ?>" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                        foreach ($video_url as $data) {
+                            if (!empty($data)) { ?>
+                                <div>
+                                    <video width="80%" height="80%" controls controlsList="nodownload">
+                                        <source src="<?php echo $data ?>" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
                         <?php } else {
-                            echo '<h1>Video tidak tersedia</h1>';
+                                echo '<h1>Video tidak tersedia</h1>';
+                            }
                         }
                     } else {
                         echo '<h1>Anda Tidak Terdaftar di Sub Materi Ini</h1><br/>
-                        <h2>untuk mendaftar pada sub materi ini, silahkan klik <a href="'. base_url('C_catalog').'">di sini</a></h2>';
+                        <h2>untuk mendaftar pada sub materi ini, silahkan klik <a href="' . base_url('C_catalog') . '">di sini</a></h2>';
                     }
                 } else {
                     if (!empty($thumb_url)) { ?>
                         <img src="<?php echo $thumb_url ?>" alt="My Learning" height="100%" width="100%" style="border-radius: 10px;">
                 <?php } else {
-                    echo '';
-                }
+                        echo '';
+                    }
                 } ?>
             </div>
         </div>
