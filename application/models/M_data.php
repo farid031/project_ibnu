@@ -133,7 +133,7 @@ class M_data extends CI_Model
             $whr = 'WHERE '.$where;
         }
 
-        $query = $this->db->query("SELECT COUNT(" . $field . ") AS total FROM " . $table.$whr);
+        $query = $this->db->query("SELECT COUNT(" . $field . ") AS total FROM " . $table.' '.$whr);
 
         return $query->result();
     }

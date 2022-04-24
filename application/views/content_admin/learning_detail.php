@@ -23,6 +23,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Nama Sub Materi</th>
+                                    <th>Jumlah Peserta</th>
                                     <th>Banner</th>
                                     <th>Video</th>
                                     <th>Aksi</th>
@@ -30,13 +31,17 @@
                             </thead>
                             <tbody>
                                 <?php
+                                $this->load->model('M_data');
+
                                 $no = 1;
                                 $a = 1;
                                 foreach ($learn_detail as $data_learn) {
+                                    $jml_user = $this->M_data->get_count_data('learning_dt_user', 'id_usr_learn_dt', 'learn_dt_usr_learn_id = ' . $data_learn->id_learn_det)
                                 ?>
                                     <tr>
                                         <td><?php echo $no++; ?></td>
                                         <td><?php echo $data_learn->learn_det_desc; ?></td>
+                                        <td><?php echo $jml_user[0]->total ?></td>
                                         <td><button style="width: 100px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-banner-sub-learn<?= $a; ?>" title="Lihat Banner Sub Materi">Lihat Banner</button></td>
                                         <td><a href="<?php echo base_url('C_admin_learn_dt_video/index/' . $data_learn->id_learn_det) ?>" target="_blank"><button type="button" class="btn btn-primary" title="Lihat Video Sub Materi"><i class="fas fa-eye"></i></button></a></td>
                                         <td>
@@ -50,6 +55,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Nama Sub Materi</th>
+                                    <th>Jumlah Peserta</th>
                                     <th>Banner</th>
                                     <th>Video</th>
                                     <th>Aksi</th>
