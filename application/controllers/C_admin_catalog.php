@@ -84,15 +84,49 @@ class C_admin_catalog extends CI_Controller
     {
         $input = $this->input->post();
         $data = array(
-                'catalog_title'         => $input['nama_katalog'],
-                'catalog_penghargaan'   => $input['penghargaan'], 
-                'catalog_pelajaran'     => $input['materi'],
-                'catalog_harga'         => $input['harga'],
-                'catalog_diskon'        => $input['diskon'],
-                'catalog_link'          => $input['link'],
-                'catalog_updated_by'    => $this->session->userdata('id'),
-                'catalog_updated_at'    => date('Y-m-d H:i:s')
+            'catalog_title'         => $input['nama_katalog'],
+            'catalog_penghargaan'   => $input['penghargaan'], 
+            'catalog_pelajaran'     => $input['materi'],
+            'catalog_harga'         => $input['harga'],
+            'catalog_diskon'        => $input['diskon'],
+            'catalog_link'          => $input['link'],
+            'catalog_updated_by'    => $this->session->userdata('id'),
+            'catalog_updated_at'    => date('Y-m-d H:i:s')
+        );
+
+        if (!empty($_FILES['flyer']['name']) || $_FILES['flyer']['name'] !== '') {
+            $config = array(
+                'upload_path'   => 'assets/img/flyer-catalog/',
+                'allowed_types' => 'gif|jpg|png',
+                'max_size'      => '1024', // in KB
+                'file_name'     => 'flyer_'. $id_catalog,
+                'overwrite'     => TRUE
             );
+
+            $this->upload->initialize($config);
+
+            if (!$this->upload->do_upload('flyer')) {
+                $error = $this->upload->display_errors();
+
+                $script = '
+                    <script>
+                        Swal.fire({
+                            title: "Error",
+                            text: "' . $error . '",
+                            icon: "error"
+                        }).then((result) => {
+                            window.location.href = "' . base_url('C_admin_catalog') . '";
+                        })
+                    </script>
+                ';
+
+                die($error);
+            } else {
+                $data_gambar = $this->upload->data();
+
+                $data['catalog_flyer_url'] = $config['upload_path'] . $config['file_name'] . $data_gambar['file_ext'];
+            }
+        }
 
         $this->M_data->update_data('catalog', $data, 'id_catalog = ' . $id_catalog);
         redirect('C_admin_catalog');

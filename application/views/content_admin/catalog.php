@@ -170,6 +170,11 @@
                                 <label for="link">Link Google Form *</label>
                                 <input class="form-control" type="text" id="link" name="link" placeholder="Masukkan Link Google Form" required value="<?php echo $data->catalog_link ?>">
                             </div>
+                            <div class="form-group">
+                                <label for="flyer">Flyer Katalog</label>
+                                <input class="form-control" type="file" id="flyer" name="flyer" accept="image/*">
+                                <small>* Ukuran file maksimal 1 MB<br/>* Kosongi jika tidak ingin merubah flyer</small>
+                            </div>
                         </div>
 
                         <div class="modal-footer">

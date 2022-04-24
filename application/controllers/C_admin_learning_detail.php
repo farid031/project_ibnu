@@ -78,40 +78,6 @@ class C_admin_learning_detail extends CI_Controller
             }
         }
 
-        if (!empty($_FILES['video']['name']) || $_FILES['video']['name'] !== '') {
-            $config_video = array(
-                'upload_path'   => 'assets/video/video-learning/',
-                'allowed_types' => 'mp4|3gp|avi',
-                //'max_size'      => '1024', // in KB
-                'file_name'     => 'video_learning_' . $next_id,
-                'overwrite'     => TRUE
-            );
-
-            $this->upload->initialize($config_video);
-
-            if (!$this->upload->do_upload('video')) {
-                $error = $this->upload->display_errors();
-
-                $script = '
-                    <script>
-                        Swal.fire({
-                            title: "Error",
-                            text: "' . $error . '",
-                            icon: "error"
-                        }).then((result) => {
-                            window.location.href = "' . base_url('C_admin_catalog') . '";
-                        })
-                    </script>
-                ';
-
-                die($error);
-            } else {
-                $data_video = $this->upload->data();
-
-                $data['learn_det_video_file'] = $config_video['file_name'] . $data_video['file_ext'];
-            }
-        }
-
         $this->M_data->simpan_data('learning_detail', $data);
         redirect('C_admin_learning_detail/index/' . $id_header);
     }
@@ -163,40 +129,6 @@ class C_admin_learning_detail extends CI_Controller
             }
         }
 
-        if (!empty($_FILES['video']['name']) || $_FILES['video']['name'] !== '') {
-            $config_video = array(
-                'upload_path'   => 'assets/video/video-learning/',
-                'allowed_types' => 'mp4|3gp|avi',
-                //'max_size'      => '1024', // in KB
-                'file_name'     => 'video_learning_' . $id_detail,
-                'overwrite'     => TRUE
-            );
-
-            $this->upload->initialize($config_video);
-
-            if (!$this->upload->do_upload('video')) {
-                $error = $this->upload->display_errors();
-
-                $script = '
-                    <script>
-                        Swal.fire({
-                            title: "Error",
-                            text: "' . $error . '",
-                            icon: "error"
-                        }).then((result) => {
-                            window.location.href = "' . base_url('C_admin_catalog') . '";
-                        })
-                    </script>
-                ';
-
-                die($error);
-            } else {
-                $data_video = $this->upload->data();
-
-                $data['learn_det_video_file'] = $config_video['file_name'] . $data_video['file_ext'];
-            }
-        }
-
         $this->M_data->update_data('learning_detail', $data, 'id_learn_det = ' . $id_detail);
         redirect('C_admin_learning_detail/index/' . $id_header);
     }
@@ -206,10 +138,6 @@ class C_admin_learning_detail extends CI_Controller
         $learning = $this->M_data->get_learning_detail_by_id($_POST['id_detail']);
         if (!empty($learning[0]->learn_det_banner_file)) {
             unlink('assets/img/banner-learning/'.$learning[0]->learn_det_banner_file);
-        }
-
-        if (!empty($learning[0]->learn_det_video_file)) {
-            unlink('assets/video/video-learning/'.$learning[0]->learn_det_video_file);
         }
 
         $this->M_data->hapus_data('learning_detail', 'id_learn_det = ' . $_POST['id_detail']);

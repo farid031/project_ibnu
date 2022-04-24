@@ -235,6 +235,22 @@ class M_data extends CI_Model
         return $query->result();
     }
 
+    function get_learning_video($id_detail)
+    {
+        $query = $this->db->query(
+            "SELECT
+                *
+            FROM
+                learning_detail_video
+            WHERE
+                vid_learn_id_learn_det = " . $id_detail . "
+            ORDER BY
+                vid_learn_desc ASC"
+        );
+
+        return $query->result();
+    }
+
     function get_user()
     {
         $query = $this->db->query(

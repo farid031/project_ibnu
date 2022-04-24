@@ -38,7 +38,7 @@
                                         <td><?php echo $no++; ?></td>
                                         <td><?php echo $data_learn->learn_det_desc; ?></td>
                                         <td><button style="width: 100px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-banner-sub-learn<?= $a; ?>" title="Lihat Banner Sub Materi">Lihat Banner</button></td>
-                                        <td><button style="width: 100px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-video-sub-learn<?= $a; ?>" title="Lihat Video Sub Materi">Lihat Video</button></td>
+                                        <td><a href="<?php echo base_url('C_admin_learn_dt_video/index/' . $data_learn->id_learn_det) ?>" target="_blank"><button type="button" class="btn btn-primary" title="Lihat Video Sub Materi"><i class="fas fa-eye"></i></button></a></td>
                                         <td>
                                             <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit<?= $a; ?>" title="Edit Judul Sub Materi"><i class="fas fa-pen"></i></button> <button class="btn btn-danger btn-md" onclick="hapusLearningDetail(<?php echo $data_learn->id_learn_det ?>)" title="Hapus Sub Materi"><i class="fas fa-trash-alt"></i></button> <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-input-cat-user<?= $a; ?>" title="Input Peserta"><i class="fas fa-user-plus"></i></button>
                                         </td>
@@ -89,11 +89,6 @@
                             <small>* Kosongi, jika tidak ingin mengupload banner sub Materi</small><br />
                             <small>* Ukuran file maksimal 5 MB</small>
                         </div>
-                        <div class="form-group">
-                            <label for="video">Video Sub Materi</label>
-                            <input class="form-control" type="file" id="video" name="video" accept="video/*">
-                            <small>* Kosongi, jika tidak ingin mengupload video sub materi</small>
-                        </div>
                     </div>
 
                     <div class="modal-footer">
@@ -132,11 +127,6 @@
                                 <input class="form-control" type="file" id="banner" name="banner" accept="image/*">
                                 <small>* Kosongi, jika tidak ingin mengubah banner sub Materi</small><br />
                                 <small>* Ukuran file maksimal 5 MB</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="video">Video Sub Materi</label>
-                                <input class="form-control" type="file" id="video" name="video" accept="video/*">
-                                <small>* Kosongi, jika tidak ingin mengubah video sub materi</small>
                             </div>
                         </div>
 
@@ -192,47 +182,6 @@
     ?>
     <!-- End Modal Banner -->
 
-    <!-- Modal Video -->
-    <?php
-    $y = 1;
-    foreach ($learn_detail as $data) { ?>
-        <div class="modal fade" id="modal-video-sub-learn<?= $y++; ?>">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">Video Sub Materi</h4>
-                    </div>
-
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <?php if (!empty($data->learn_det_video_file)) { ?>
-                                <video width="100%" height="100%" controls>
-                                    <source src="<?php echo base_url('assets/video/video-learning/' . $data->learn_det_video_file) ?>" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            <?php } else { ?>
-                                Video belum diupload
-                            <?php }
-                            ?>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default pull-right" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-                <!-- /.modal-content -->
-            </div>
-            <!-- /.modal-dialog -->
-        </div>
-    <?php
-    }
-    ?>
-    <!-- End Modal Video -->
-
-
     <!-- Modal Input Peserta -->
     <?php
     $z = 1;
@@ -282,7 +231,7 @@
                                         <td><?php echo $data->user_email; ?></td>
                                         <td><?php echo $data->user_company; ?></td>
                                         <td>
-                                            <button class="btn btn-danger btn-xs" title="Hapus Peserta" onclick="hapusEntryPeserta('<?php echo $data->id_user.'-'.$data->learn_dt_usr_learn_id ?>')"><i class="fa fa-trash"></i></button>
+                                            <button class="btn btn-danger btn-xs" title="Hapus Peserta" onclick="hapusEntryPeserta('<?php echo $data->id_user . '-' . $data->learn_dt_usr_learn_id ?>')"><i class="fa fa-trash"></i></button>
                                         </td>
                                     </tr>
                                 <?php } ?>

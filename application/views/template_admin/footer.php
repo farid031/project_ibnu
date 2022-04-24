@@ -430,6 +430,32 @@
         })
     }
 
+    function hapusLearningVideo(id_video) {
+        Swal.fire({
+            title: 'Apakah Anda Yakin?',
+            text: "Video Sub Materi yang telah dihapus tidak dapat dikembalikan",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ya, hapus!',
+            cancelButtonText: 'Batal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: "POST",
+                    url: "<?php echo base_url('C_admin_learn_dt_video/delete_learn_video'); ?>",
+                    data: {
+                        id_video: id_video
+                    },
+                    success: (data) => {
+                        window.location.reload();
+                    }
+                });
+            }
+        })
+    }
+
     function regUser(id_user) {
         Swal.fire({
             title: 'Apakah Anda Yakin?',
