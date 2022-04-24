@@ -43,7 +43,7 @@
                                         <td><?php echo $data_sert->cert_no; ?></td>
                                         <td><?php echo date('d M Y H:i:s', strtotime($data_sert->cert_created_at)); ?></td>
                                         <td>
-                                            <button style="width: 80px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-detail<?php echo $b++; ?>">QR Code</button> <button style="width: 60px;" type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit<?= $a++; ?>">Edit</button> <button style="width: 60px;" class="btn btn-danger btn-md" onclick="hapusSertifikat(<?php echo $data_sert->id_cert ?>)">Hapus</button>
+                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-detail<?php echo $b++; ?>" title="Lihat QR Code"><i class="fas fa-qrcode"></i></button> <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit<?= $a++; ?>" title="Edit Sertifikat"><i class="fas fa-pen"></i></button> <button class="btn btn-danger btn-md" onclick="hapusSertifikat(<?php echo $data_sert->id_cert ?>)" title="Hapus Sertifikat"><i class="fas fa-trash-alt"></i></button>
                                         </td>
                                     </tr>
                                 <?php } ?>
@@ -137,8 +137,8 @@
     $z = 1;
     foreach ($sertifikat as $data) {
         $cert_name = str_replace('certificate', 'qrcode', $data->cert_file_url);
-        $cert_name_2 = str_replace('pdf', 'png', $cert_name); 
-        ?>
+        $cert_name_2 = str_replace('pdf', 'png', $cert_name);
+    ?>
         <div class="modal fade" id="modal-edit<?php echo $y++; ?>">
             <div class="modal-dialog">
                 <div class="modal-content">

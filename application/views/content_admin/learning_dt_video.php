@@ -36,7 +36,7 @@
                                     <tr>
                                         <td><?php echo $no++; ?></td>
                                         <td><?php echo $data_vd->vid_learn_desc; ?></td>
-                                        <td><button style="width: 100px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-video-sub-learn<?= $a; ?>" title="Lihat Video Sub Materi">Lihat Video</button></td>
+                                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-video-sub-learn<?= $a; ?>" title="Lihat Video Sub Materi"><i class="fas fa-eye"></i></button></td>
                                         <td>
                                             <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit<?= $a; ?>" title="Edit Video"><i class="fas fa-pen"></i></button> <button class="btn btn-danger btn-md" onclick="hapusLearningVideo(<?php echo $data_vd->id_vid_learn ?>)" title="Hapus Video"><i class="fas fa-trash-alt"></i></button>
                                         </td>
@@ -105,7 +105,7 @@
         <div class="modal fade" id="modal-edit<?= $y++; ?>">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form role="form" method="post" action="<?php echo base_url('C_admin_learn_dt_video/update_learn_video/' . $data->id_vid_learn.'-'.$data->vid_learn_id_learn_det); ?>" enctype="multipart/form-data" accept-charset="utf-8">
+                    <form role="form" method="post" action="<?php echo base_url('C_admin_learn_dt_video/update_learn_video/' . $data->id_vid_learn . '-' . $data->vid_learn_id_learn_det); ?>" enctype="multipart/form-data" accept-charset="utf-8">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span></button>

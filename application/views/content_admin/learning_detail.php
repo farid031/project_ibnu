@@ -42,7 +42,7 @@
                                         <td><?php echo $no++; ?></td>
                                         <td><?php echo $data_learn->learn_det_desc; ?></td>
                                         <td><?php echo $jml_user[0]->total ?></td>
-                                        <td><button style="width: 100px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-banner-sub-learn<?= $a; ?>" title="Lihat Banner Sub Materi">Lihat Banner</button></td>
+                                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-banner-sub-learn<?= $a; ?>" title="Lihat Banner Sub Materi"><i class="fas fa-eye"></i></button></td>
                                         <td><a href="<?php echo base_url('C_admin_learn_dt_video/index/' . $data_learn->id_learn_det) ?>" target="_blank"><button type="button" class="btn btn-primary" title="Lihat Video Sub Materi"><i class="fas fa-eye"></i></button></a></td>
                                         <td>
                                             <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit<?= $a; ?>" title="Edit Judul Sub Materi"><i class="fas fa-pen"></i></button> <button class="btn btn-danger btn-md" onclick="hapusLearningDetail(<?php echo $data_learn->id_learn_det ?>)" title="Hapus Sub Materi"><i class="fas fa-trash-alt"></i></button> <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-input-cat-user<?= $a; ?>" title="Input Peserta"><i class="fas fa-user-plus"></i></button>

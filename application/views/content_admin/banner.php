@@ -40,7 +40,7 @@
                                         <td><?php echo $data_banner->subjudul_banner; ?></td>
                                         <td><?php echo $data_banner->desc_banner; ?></td>
                                         <td>
-                                            <button style="width: 60px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-image<?= $a; ?>" title="Lihat Flyer">Flyer</button> <button style="width: 60px;" type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit<?= $a; ?>" title="Edit Banner">Edit</button> <button style="width: 60px;" class="btn btn-danger btn-md" onclick="hapusBanner(<?php echo $data_banner->id_banner ?>)" title="Hapus Banner">Hapus</button>
+                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-image<?= $a; ?>" title="Lihat Flyer"><i class="fas fa-image"></i></button> <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit<?= $a; ?>" title="Edit Banner"><i class="fas fa-pen"></i></button> <button class="btn btn-danger btn-md" onclick="hapusBanner(<?php echo $data_banner->id_banner ?>)" title="Hapus Banner"><i class="fas fa-trash-alt"></i></button>
                                         </td>
                                     </tr>
                                 <?php $a++;

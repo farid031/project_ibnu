@@ -36,7 +36,7 @@
                                         <td><?php echo $no++; ?></td>
                                         <td><?php echo $data_sert->jns_cert_name; ?></td>
                                         <td>
-                                            <button style="width: 60px;" type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit<?= $a++; ?>">Edit</button> <button style="width: 60px;" class="btn btn-danger btn-md" onclick="hapusJnsSertifikat(<?php echo $data_sert->id_jns_cert ?>)">Hapus</button>
+                                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit<?= $a++; ?>" title="Edit Jenis Sertifikat"><i class="fas fa-pen"></i></button> <button class="btn btn-danger btn-md" onclick="hapusJnsSertifikat(<?php echo $data_sert->id_jns_cert ?>)" title="Hapus Jenis Sertifikat"><i class="fas fa-trash-alt"></i></button>
                                         </td>
                                     </tr>
                                 <?php } ?>

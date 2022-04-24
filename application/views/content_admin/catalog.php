@@ -46,7 +46,7 @@
                                         <td><?php echo $data_cat->catalog_diskon . '%'; ?></td>
                                         <td><?php echo 'Rp' . number_format(($data_cat->catalog_harga - ($data_cat->catalog_harga * ($data_cat->catalog_diskon / 100))), 0, ',', '.') . ',-' ?></td>
                                         <td>
-                                            <button style="width: 60px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-image<?= $a; ?>" title="Lihat Flyer">Flyer</button> <button style="width: 60px;" type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit<?= $a; ?>" title="Edit Katalog">Edit</button> <button style="width: 60px;" class="btn btn-danger btn-md" onclick="hapusCatalog(<?php echo $data_cat->id_catalog ?>)" title="Hapus Katalog">Hapus</button>
+                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-image<?= $a; ?>" title="Lihat Flyer"><i class="fas fa-image"></i></button> <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit<?= $a; ?>" title="Edit Katalog"><i class="fas fa-pen"></i></button> <button class="btn btn-danger btn-md" onclick="hapusCatalog(<?php echo $data_cat->id_catalog ?>)" title="Hapus Katalog"><i class="fas fa-trash-alt"></i></button>
                                         </td>
                                     </tr>
                                 <?php $a++;
@@ -173,7 +173,7 @@
                             <div class="form-group">
                                 <label for="flyer">Flyer Katalog</label>
                                 <input class="form-control" type="file" id="flyer" name="flyer" accept="image/*">
-                                <small>* Ukuran file maksimal 1 MB<br/>* Kosongi jika tidak ingin merubah flyer</small>
+                                <small>* Ukuran file maksimal 1 MB<br />* Kosongi jika tidak ingin merubah flyer</small>
                             </div>
                         </div>
 
