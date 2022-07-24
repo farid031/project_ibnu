@@ -12,17 +12,19 @@
                 <?php } ?>
                 <form enctype="multipart/form-data" action="<?php echo base_url('C_register/saveData') ?>" method="POST">
                     <small>Full name *</small><br />
-                    <input type="text" class=" form-control" name="nama" placeholder="Enter your full name" width="50%"><br />
+                    <input type="text" class=" form-control" name="nama" placeholder="Enter your full name" width="50%" required><br />
                     <small>Company / School*</small><br />
-                    <input type="text" class="form-control" name="company" placeholder="Enter your company / school" width="50%"><br />
+                    <input type="text" class="form-control" name="company" placeholder="Enter your company / school" width="50%" required><br />
                     <small>Email *</small><br />
-                    <input type="text" class=" form-control" name="email" placeholder="Enter your email" width="50%"><br />
+                    <input type="text" class=" form-control" name="email" placeholder="Enter your email" width="50%" required><br />
                     <small>Address *</small><br />
-                    <input type="text" class="form-control" name="address" placeholder="Enter your address" width="50%"><br />
+                    <input type="text" class="form-control" name="address" placeholder="Enter your address" width="50%" required><br />
+                    <small>Phone Number *<br/>Example: 085123456789</small><br />
+                    <input type="text" class="form-control" name="phone_number" placeholder="Enter your phone number" width="50%" required><br />
                     <small>Password *</small><br />
-                    <input type="password" class=" form-control" name="pass" placeholder="Enter your password" width="50%"><br />
+                    <input type="password" class=" form-control" name="pass" placeholder="Enter your password" width="50%" required><br />
                     <small>Retype Password *</small><br />
-                    <input type="password" class="form-control" name="repass" placeholder="Retype your password" width="50%"><br />
+                    <input type="password" class="form-control" name="repass" placeholder="Retype your password" width="50%" required><br />
                     <div align="right">
                         <input type="submit" value="Register" name="submit" class="btn" style="color: black; background-color: #FAC100; border: 1px solid black;">
                     </div>
