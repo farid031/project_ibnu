@@ -6,6 +6,11 @@
                     </button>
                     <?php echo $this->session->flashdata('failed'); ?>
                 </div>
+            <?php } else if (!empty($this->session->flashdata('success'))) { ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    </button>
+                    <?php echo $this->session->flashdata('success'); ?>
+                </div>
             <?php } ?>
             <h2>Login</h2><br />
             <div align="left">

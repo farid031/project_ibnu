@@ -19,16 +19,6 @@ class C_register extends CI_Controller
         $data['content'] = 'content/register';
         $data['title']     = 'Register';
 
-        $html = '
-            <p>Hi, Muhammad, <br/>Selamat datang di Engineer Nusantara</p><br/>
-            <p><b>Selangkah lagi untuk menikmati layanan Engineer Nusantara</b></p><br/>
-            <p>Verifikasi email Anda sekarang dengan menekan tombol di bawah ini.</p><br/>
-
-            <a href="' . base_url('C_register/verifyEmail/') . '" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px; text-decoration: none;">Verify Email</a>
-        ';
-
-        die($html);
-
         $this->load->view('template/content', $data);
     }
 
@@ -53,7 +43,10 @@ class C_register extends CI_Controller
                 redirect(base_url('C_register'));
             } else {
                 if ($pass === $repass) {
+                    $id = $this->M_data->get_max_id('user', 'id_user');
+                    $next_id = $id[0]->id + 1;
                     $dataIns = array(
+                        'id_user'           => $next_id,
                         'user_name'         => $nama,
                         'user_company'      => $company,
                         'user_email'        => $email,
@@ -66,11 +59,15 @@ class C_register extends CI_Controller
 
                     $this->M_data->simpan_data('user', $dataIns);
 
-                    $this->sendEmail($email, $nama);
+                    $send = $this->sendEmail($email, $nama, $next_id);
 
-                    $this->session->set_flashdata('success', 'Check Your email to verify your account...!');
-
-                    redirect(base_url('C_login'));
+                    if ($send == true) {
+                        $this->session->set_flashdata('success', 'Your Email has been successfully sent, please check your email...!');
+                        redirect(base_url('C_login'));
+                    } else {
+                        $this->session->set_flashdata('failed', $send);
+                        redirect(base_url('C_register'));
+                    }
                 } else {
                     $this->session->set_flashdata('failed', 'Sorry, the password you entered is not match...!');
                     redirect(base_url('C_register'));
@@ -79,11 +76,11 @@ class C_register extends CI_Controller
         }
     }
 
-    public function sendEmail($email, $nama)
+    public function sendEmail($email, $nama, $id_user)
     {
         $mail = new PHPMailer\PHPMailer\PHPMailer(true);
 
-        $mail->SMTPDebug = 3;
+        $mail->SMTPDebug = 0;
         $mail->isSMTP();                                   
         $mail->Host = "engineernusantara.com";
         $mail->SMTPAuth = true;                            
@@ -95,22 +92,23 @@ class C_register extends CI_Controller
         $mail->FromName = "Engineer Nusantara";
         $mail->addAddress($email, $nama);
         $mail->isHTML(true);
-        $mail->Subject = "PHP Mailer Tes";
+        $mail->Subject = "Verifikasi Email";
 
         $html = '
             <p>Hi, '.$nama. ', <br/>Selamat datang di Engineer Nusantara</p><br/>
             <p><b>Selangkah lagi untuk menikmati layanan Engineer Nusantara</b></p><br/>
             <p>Verifikasi email Anda sekarang dengan menekan tombol di bawah ini.</p><br/>
 
-            <a href="'.base_url('C_register/verifyEmail/'.$email).'" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px; text-decoration: none;">Verify Email</a>
+            <a href="'.base_url('C_verify_email/index/'.$id_user).'" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px; text-decoration: none;">Verifikasi Email</a>
         ';
-        $mail->Body = "<i>This a testing mail using PHPMailer SMTP</i>";
+        $mail->Body = $html;
         $mail->AltBody = "This is the plain text version of the email content";
+        $mail->send();
 
         if(!$mail->send()){
-            echo "Mailer Error: " . $mail->ErrorInfo;
+            return $mail->ErrorInfo;
         } else {
-            echo "Message has been sent successfully";
+           return true;
         }
     }
 }

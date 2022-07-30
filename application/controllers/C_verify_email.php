@@ -9,40 +9,16 @@ class C_verify_email extends CI_Controller
         $this->load->model('M_data');
     }
 
-    public function index()
+    public function index($id_user)
     {
-        $data['content']    = 'content/validation';
-        $data['title']      = 'Certificate Validation Form';
+        $dataIns = array(
+            'user_email_is_verif' => 1,
+            'user_email_verif_at' => date('Y-m-d H:i:s')
+        );
 
-        $this->load->view('template/content', $data);
-    }
+        $this->M_data->update_data('user', $dataIns, array('id_user' => $id_user));
 
-    public function validate_cert()
-    {
-        $cert_number_input = $this->input->post('cert_numb');
-
-        $data['title']      = 'Certificate Validation';
-        $data['cert']       = $this->M_data->get_cert_by_numb($cert_number_input);
-
-        if (!empty($data['cert'])) {
-            $data['content']    = 'content/validate_cert';
-        } else {
-            $data['content']    = 'content/validate_cert_invalid';
-        }
-        $this->load->view('template/content', $data);
-    }
-
-    //validate certificate with barcode
-    public function val_qr($id_cert)
-    {
-        $data['title']      = 'Certificate Validation';
-        $data['cert']       = $this->M_data->get_cert_by_id($id_cert);
-
-        if (!empty($data['cert'])) {
-            $data['content']    = 'content/validate_cert';
-        } else {
-            $data['content']    = 'content/validate_cert_invalid';
-        }
-        $this->load->view('template/content', $data);
+        $this->session->set_flashdata('success', 'Your Email has been successfully verified...!');
+        redirect(base_url('C_login'));
     }
 }
