@@ -18,7 +18,7 @@
                                         <h5 style="color: #FCD128;"><b><?php echo 'Rp' . number_format(($data->catalog_harga * ($data->catalog_diskon / 100)), 0, ',', '.') . ',-' ?></b></h5>
                                     </td>
                                     <td width="25%" align="center">
-                                        <h5 class="alert alert-danger"><b><?php echo '-' . $data->catalog_diskon ?></b></h5>
+                                        <h5 class="alert alert-danger"><b><?php echo '-' . $data->catalog_diskon.'%' ?></b></h5>
                                     </td>
                                 </tr>
                                 <tr>
@@ -42,7 +42,7 @@
                                         <h5><b><?php echo 'Rp' . number_format(($data->catalog_harga - ($data->catalog_harga * ($data->catalog_diskon / 100))), 0, ',', '.') . ',-' ?></b></h5>
                                     </td>
                                     <td width="25%" align="center">
-                                        <h5 class="alert alert-danger"><b><?php echo '-' . $data->catalog_diskon ?></b></h5>
+                                        <h5 class="alert alert-danger"><b><?php echo '-' . $data->catalog_diskon.'%' ?></b></h5>
                                     </td>
                                 </tr>
                                 <tr>

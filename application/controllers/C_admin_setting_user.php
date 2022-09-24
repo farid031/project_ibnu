@@ -73,6 +73,32 @@ class C_admin_setting_user extends CI_Controller
         $this->M_data->update_data('user', $data, 'id_user = ' . $_POST['id_user']);
     }
 
+    public function update_user($id_user)
+    {
+        $input = $this->input->post();
+
+        $data = array(
+            'user_name'         => $input['nama_peserta'],
+            'user_company'      => $input['nama_org'],
+            'user_email'        => $input['email'],
+            'user_address'      => $input['alamat'],
+            'user_linkedin'     => $input['linkedin'],
+            'user_facebook'     => $input['facebook'],
+            'user_instagram'    => $input['instagram'],
+            'user_twitter'      => $input['twitter'],
+            'user_youtube'      => $input['youtube'],
+            'user_phone_number' => $input['no_hp'],
+            'user_is_admin'     => $input['is_admin']
+        );
+
+        if (!empty($input['pass'])) {
+            $data['user_pass'] = password_hash($input['pass'], PASSWORD_DEFAULT);
+        }
+
+        $this->M_data->update_data('user', $data, 'id_user = ' . $id_user);
+        redirect('C_admin_setting_user');
+    }
+
     public function export_excel_peserta()
     {
         $dir = "./file_excel/peserta/";
@@ -114,7 +140,7 @@ class C_admin_setting_user extends CI_Controller
         }
         $writer = new Xlsx($spreadsheet);
         $writer->save($dir. $fileName);
-        header("Content-Type: application/vnd.ms-excel");
+        header("Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
         redirect(base_url($dir . $fileName)); 
     }
 }

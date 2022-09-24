@@ -259,7 +259,7 @@ class M_data extends CI_Model
             FROM
                 user
             WHERE
-                user_is_admin IS NULL
+                user_is_admin != 1 OR user_is_admin IS NULL
             ORDER BY
                 user_is_registered DESC,
                 user_name ASC"
