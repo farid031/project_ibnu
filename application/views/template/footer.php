@@ -86,6 +86,32 @@
 
 <!-- Javascript foor user page -->
 <script>
+    function daftarPelatihan(id_user, id_catalog) {
+        Swal.fire({
+            title: 'Apakah Anda Yakin?',
+            text: "Anda tidak dapat membatalkan kepsertaan setelah mendaftar...",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ya, Daftar!',
+            cancelButtonText: 'Batal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: "POST",
+                    url: "<?php echo base_url('C_catalog/daftar_pelatihan'); ?>",
+                    data: {
+                        id_user: id_user,
+                        id_catalog: id_catalog
+                    },
+                    success: (data) => {
+                        window.location.reload();
+                    }
+                });
+            }
+        })
+    }
     $(() => {
         $('#tbl_my_achievments').DataTable({
             'paging': false,

@@ -24,4 +24,20 @@ class C_catalog extends CI_Controller
 
         $this->load->view('template/user_content', $data);
     }
+
+    public function daftar_pelatihan()
+    {
+        $id_user = $_POST['id_user'];
+        $id_catalog = $_POST['id_catalog'];
+
+        $dataIns = array(
+            'daftar_id_peserta'     => $id_user,
+            'daftar_id_catalog'     => $id_catalog,
+            'daftar_created_by'     => $id_user,
+            'daftar_created_at'     => date('Y-m-d H:i:s')
+        );
+
+        $this->M_data->simpan_data('peserta_catalog', $dataIns);
+
+    }
 }
